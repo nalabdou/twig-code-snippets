@@ -1,0 +1,36 @@
+{
+    "symfony twig form theme tag": {
+        "prefix": "form_theme",
+        "body": [
+            "{% form_theme form ${1:resources} %}"
+        ],
+        "scope": "twig",
+        "description": "Sets the resources to override the form theme for the given form view instance. You can use _self as resources to set it to the current resource."
+    },
+    "symfony twig stopwatch tag": {
+        "prefix": "stopwatch",
+        "body": [
+            "{% stopwatch '${1:event_name}' %}",
+            "\t$2",
+            "{% endstopwatch %}"
+        ],
+        "scope": "twig",
+        "description": "Measures the execution time of a block of Twig code."
+    },
+    "symfony twig trans tag": {
+        "prefix": "trans",
+        "body": [
+            "{% trans with {'${1:%name%}': '${2:Fabien}'} from '${3:app}' into '${4:fr}' %}Hello ${1:%name%}{% endtrans %}"
+        ],
+        "scope": "twig",
+        "description": "Translates the given message."
+    },
+    "symfony twig trans_default_domain tag": {
+        "prefix": "trans_default_domain",
+        "body": [
+            "{% trans_default_domain ${1:domain} %}"
+        ],
+        "scope": "twig",
+        "description": "This will set the default domain in the current template."
+    }
+}

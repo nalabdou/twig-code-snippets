@@ -1,0 +1,187 @@
+{
+    "twig apply tag": {
+        "scope": "twig",
+        "prefix": "apply",
+        "body": [
+            "{% apply ${1|upper,lower|} %}",
+            "\t$2",
+            "{% endapply %}"
+        ],
+        "description": "The apply tag allows you to apply Twig filters on a block of template data."
+    },
+    "twig autoescape tag": {
+        "scope": "twig",
+        "prefix": "autoescape",
+        "body": [
+            "{% autoescape '${1|html,js,css,html_attr,js_attr,css_attr,url|}' %}",
+            "\t$2",
+            "{% endautoescape %}"
+        ],
+        "description": "The autoescape tag allows you to set the escaping strategy for a block of template data."
+    },
+    "twig block tag": {
+        "scope": "twig",
+        "prefix": "block",
+        "body": [
+            "{% block ${1:block_name} %}",
+            "\t$2",
+            "{% endblock %}"
+        ],
+        "description": "The block tag defines a block of template that can be overridden by child templates."
+    },
+    "twig cache tag": {
+        "scope": "twig",
+        "prefix": "cache",
+        "body": [
+            "{% cache '${1:cache key}' ttl(${2:300}) tags('${3:cms}') %}",
+            "\t$4",
+            "{% endcache %}"
+        ],
+        "description": "The cache tag allows you to cache a fragment of a template."
+    },
+    "twig deprecated tag": {
+        "scope": "twig",
+        "prefix": "deprecated",
+        "body": [
+            "{% deprecated '${1:deprecated message}' %}"
+        ],
+        "description": "The deprecated tag allows you to deprecate a template."
+    },
+    "twig do tag": {
+        "scope": "twig",
+        "prefix": "do",
+        "body": [
+            "{% do ${1:expression} %}"
+        ],
+        "description": "The do tag allows you to execute an expression for its side effects."
+    },
+    "twig embed tag": {
+        "scope": "twig",
+        "prefix": "embed",
+        "body": [
+            "{% embed '${1:template_name}' %}",
+            "\t{% block ${2:block_name} %}",
+            "\t\t$3",
+            "\t{% endblock %}",
+            "{% endembed %}"
+        ],
+        "description": "The embed tag allows you to include a template and customize some blocks."
+    },
+    "twig extends tag": {
+        "scope": "twig",
+        "prefix": "extends",
+        "body": [
+            "{% extends '${1:template_name}' %}"
+        ],
+        "description": "The extends tag allows you to extend a template."
+    },
+    "twig flush tag": {
+        "scope": "twig",
+        "prefix": "flush",
+        "body": [
+            "{% flush %}"
+        ],
+        "description": "The flush tag allows you to flush the output buffer."
+    },
+    "twig for tag": {
+        "scope": "twig",
+        "prefix": "for",
+        "body": [
+            "{% for ${1:item} in ${2:items} %}",
+            "\t$3",
+            "{% endfor %}"
+        ],
+        "description": "The for tag allows you to iterate over a sequence."
+    },
+    // {% from 'forms.html' import input as input_field, textarea %}
+    "twig from tag": {
+        "scope": "twig",
+        "prefix": "from",
+        "body": [
+            "{% from '${1:template_name}' import ${2:macro_name} as ${3:macro_alias} %}"
+        ],
+        "description": "The from tag allows you to import macros from another template."
+    },
+    "twig if tag": {
+        "scope": "twig",
+        "prefix": "if",
+        "body": [
+            "{% if ${1:condition} %}",
+            "\t$2",
+            "{% endif %}"
+        ],
+        "description": "The if tag allows you to execute a block of template data only if a condition is met."
+    },
+    "twig import tag": {
+        "scope": "twig",
+        "prefix": "import",
+        "body": [
+            "{% import '${1:template_name}' as ${2:macro_namespace} %}"
+        ],
+        "description": "The import tag allows you to import macros from another template."
+    },
+    "twig include tag": {
+        "scope": "twig",
+        "prefix": "include",
+        "body": [
+            "{% include '${1:template_name}' %}"
+        ],
+        "description": "The include tag allows you to include a template."
+    },
+    "twig macro tag": {
+        "scope": "twig",
+        "prefix": "macro",
+        "body": [
+            "{% macro ${1:macro_name}(${2:arguments}) %}",
+            "\t$3",
+            "{% endmacro %}"
+        ],
+        "description": "The macro tag allows you to define a macro."
+    },
+    "twig sandbox tag": {
+        "scope": "twig",
+        "prefix": "sandbox",
+        "body": [
+            "{% sandbox %}",
+            "\t$1",
+            "{% endsandbox %}"
+        ],
+        "description": "The sandbox tag allows you to restrict the tags, filters, and functions that are allowed to be used in a template."
+    },
+    "twig set tag": {
+        "scope": "twig",
+        "prefix": "set",
+        "body": [
+            "{% set ${1:variable_name} = ${2:expression} %}"
+        ],
+        "description": "The set tag allows you to set a template variable."
+    },
+    "twig use tag": {
+        "scope": "twig",
+        "prefix": "use",
+        "body": [
+            "{% use '${1:template_name}' with ${2:block_name} as ${3:block_alias} %}"
+        ],
+        "description": "The use tag allows you to import macros from another template."
+    },
+    "twig verbatim tag": {
+        "scope": "twig",
+        "prefix": "verbatim",
+        "body": [
+            "{% verbatim %}",
+            "\t$1",
+            "{% endverbatim %}"
+        ],
+        "description": "The verbatim tag allows you to output raw data without Twig processing it."
+    },
+    "twig with tag": {
+        "scope": "twig",
+        "prefix": "with",
+        "body": [
+            "{% with ${1:expression} %}",
+            "\t$2",
+            "{% endwith %}"
+        ],
+        "description": "The with tag allows you to set a temporary variable."
+    }
+}

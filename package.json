@@ -1,0 +1,76 @@
+{
+  "name": "twig-code-snippets",
+  "displayName": "Twig code snippets",
+  "description": "Twig code snippets :art:",
+  "version": "1.0.0",
+  "icon": "twig.png",
+  "publisher": "nadim-vscode",
+  "author": {
+    "name": "Nadim Al Abdou",
+    "url": "https://nalabdou.com"
+  },
+  "homepage": "https://github.com/nalabdou/twig-code-snippets/blob/master/README.md",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nalabdou/twig-code-snippets"
+  },
+  "bugs": "https://github.com/nalabdou/twig-code-snippets/issues",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "snippets",
+    "completion",
+    "symfony",
+    "twig"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "twig",
+        "path": "./snippets/twig/tags.code-snippets"
+      },
+      {
+        "language": "twig",
+        "path": "./snippets/twig/filters.code-snippets"
+      },
+      {
+        "language": "twig",
+        "path": "./snippets/twig/functions.code-snippets"
+      },
+      {
+        "language": "twig",
+        "path": "./snippets/twig/tests.code-snippets"
+      },
+      {
+        "language": "twig",
+        "path": "./snippets/twig/extra.code-snippets"
+      },
+      {
+        "language": "twig",
+        "path": "./snippets/symfony/tags.code-snippets"
+      },
+      {
+        "language": "twig",
+        "path": "./snippets/symfony/filters.code-snippets"
+      },
+      {
+        "language": "twig",
+        "path": "./snippets/symfony/functions.code-snippets"
+      },
+      {
+        "language": "twig",
+        "path": "./snippets/symfony/tests.code-snippets"
+      },
+      {
+        "language": "twig",
+        "path": "./snippets/symfony/extra.code-snippets"
+      }
+    ]
+  },
+  "qna": "marketplace"
+}

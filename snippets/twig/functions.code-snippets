@@ -1,0 +1,132 @@
+{
+    "twig attribute function": {
+        "scope": "twig",
+        "prefix": "attribute",
+        "body": [
+            "{{ attribute(${1:object}, ${2:method}, ${3:arguments}) }}"
+        ],
+        "description": "The attribute function allows you to call a method or an array item on an object."
+    },
+    "twig block function": {
+        "scope": "twig",
+        "prefix": "block",
+        "body": [
+            "{{ block(${1:name}) }}",
+            "\t$2",
+            "{% endblock %}"
+        ],
+        "description": "The block function allows you to call a block."
+    },
+    "twig constant function": {
+        "scope": "twig",
+        "prefix": "constant",
+        "body": [
+            "{{ constant(${1:class_name}, ${2:constant_name}) }}"
+        ],
+        "description": "The constant function allows you to get the value of a class constant."
+    },
+    "twig country_timezones function": {
+        "scope": "twig",
+        "prefix": "country_timezones",
+        "body": [
+            "{{ country_timezones(${1:country_code}) }}"
+        ],
+        "description": "The country_timezones function allows you to get the timezones for a given country."
+    },
+    "twig cycle function": {
+        "scope": "twig",
+        "prefix": "cycle",
+        "body": [
+            "{{ cycle(${1:values}, ${2:index}) }}"
+        ],
+        "description": "The cycle function allows you to cycle over values."
+    },
+    "twig date function": {
+        "scope": "twig",
+        "prefix": "date",
+        "body": [
+            "{{ date(${1:date}, ${2:format}, ${3:timezone}) }}"
+        ],
+        "description": "The date function allows you to format a date."
+    },
+    "twig dump function": {
+        "scope": "twig",
+        "prefix": "dump",
+        "body": [
+            "{{ dump(${1:var}) }}"
+        ],
+        "description": "The dump function allows you to dump a variable."
+    },
+    "twig html_classes function": {
+        "scope": "twig",
+        "prefix": "html_classes",
+        "body": [
+            "{{ html_classes(${1:class_names}, ${2:attributes}) }}"
+        ],
+        "description": "The html_classes function allows you to convert an array of HTML classes into a string."
+    },
+    "twig include function": {
+        "scope": "twig",
+        "prefix": "include",
+        "body": [
+            "{{ include(${1:template_name}, ${2:with}, ${3:ignore_missing}) }}"
+        ],
+        "description": "The include function allows you to include a template."
+    },
+    "twig max function": {
+        "scope": "twig",
+        "prefix": "max",
+        "body": [
+            "{{ max(${1:values}) }}"
+        ],
+        "description": "The max function allows you to get the maximum value in a sequence."
+    },
+    "twig min function": {
+        "scope": "twig",
+        "prefix": "min",
+        "body": [
+            "{{ min(${1:values}) }}"
+        ],
+        "description": "The min function allows you to get the minimum value in a sequence."
+    },
+    "twig parent function": {
+        "scope": "twig",
+        "prefix": "parent",
+        "body": [
+            "{{ parent() }}"
+        ],
+        "description": "The parent function allows you to call the parent block."
+    },
+    "twig random function": {
+        "scope": "twig",
+        "prefix": "random",
+        "body": [
+            "{{ random(${1:values}) }}"
+        ],
+        "description": "The random function allows you to get a random value from a sequence."
+    },
+    "twig range function": {
+        "scope": "twig",
+        "prefix": "range",
+        "body": [
+            "{{ range(${1:start}, ${2:end}, ${3:step}) }}"
+        ],
+        "description": "The range function allows you to create a sequence of numbers."
+    },
+    "twig source function": {
+        "scope": "twig",
+        "prefix": "source",
+        "body": [
+            "{{ source(${1:template_name}, ${2:ignore_missing}) }}"
+        ],
+        "description": "The source function allows you to get the source code of a template."
+    },
+    "twig template_from_string function": {
+        "scope": "twig",
+        "prefix": "template_from_string",
+        "body": [
+            "{{ template_from_string(${1:template}, ${2:name}) }}"
+        ],
+        "description": "The template_from_string function allows you to create a template from a string."
+    }
+}

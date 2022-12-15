@@ -1,0 +1,159 @@
+{
+    "symfony twig absolute_url function": {
+        "scope": "twig",
+        "prefix": "absolute_url",
+        "body": "{{ absolute_url(${1:path}) }}",
+        "description": "Returns the absolute URL (with scheme and host) from the passed relative path."
+    },
+    "symfony twig asset function": {
+        "scope": "twig",
+        "prefix": "asset",
+        "body": "{{ asset(${1:path}) }}",
+        "description": "Returns the path of a resource."
+    },
+    "symfony twig asset_version function": {
+        "scope": "twig",
+        "prefix": "asset_version",
+        "body": "{{ asset_version(${1:packageName}) }}",
+        "description": "Returns the version of a resource."
+    },
+    //{{ controller(controller, attributes = [], query = []) }}
+    "symfony twig controller function": {
+        "scope": "twig",
+        "prefix": "controller",
+        "body": "{{ controller(${1:controller}, ${2:attributes = []}, ${3:query = []}) }}",
+        "description": "Returns an instance of ControllerReference to be used with functions like render() and render_esi()."
+    },
+    "symfony twig csrf_token function": {
+        "scope": "twig",
+        "prefix": "csrf_token",
+        "body": "{{ csrf_token(${1:id}) }}",
+        "description": "Renders a CSRF token. Use this function if you want CSRF protection in a regular HTML form not managed by the Symfony Form component."
+    },
+    "symfony twig expression function": {
+        "scope": "twig",
+        "prefix": "expression",
+        "body": "{{ expression(${1:expression}) }}",
+        "description": "Creates an Expression related to the ExpressionLanguage component."
+    },
+    "symfony twig form function": {
+        "scope": "twig",
+        "prefix": "form",
+        "body": "{{ form(${1:form}, ${2:{'method': 'GET'}}) }}",
+        "description": "Renders the HTML of a complete form.."
+    },
+    "symfony twig form_end function": {
+        "scope": "twig",
+        "prefix": "form_end",
+        "body": "{{ form_end(${1:form}) }}",
+        "description": "Renders the closing tag of a form."
+    },
+    "symfony twig form_errors function": {
+        "scope": "twig",
+        "prefix": "form_errors",
+        "body": "{{ form_errors(${1:form}) }}",
+        "description": "Renders the errors of a form."
+    },
+    "symfony twig form_label function": {
+        "scope": "twig",
+        "prefix": "form_label",
+        "body": "{{ form_label(${1:form}) }}",
+        "description": "Renders the label of a form."
+    },
+    "symfony twig form_row function": {
+        "scope": "twig",
+        "prefix": "form_row",
+        "body": "{{ form_row(${1:form}) }}",
+        "description": "Renders the widget of a form."
+    },
+    "symfony twig form_start function": {
+        "scope": "twig",
+        "prefix": "form_start",
+        "body": "{{ form_start(${1:form}) }}",
+        "description": "Renders the opening tag of a form."
+    },
+    "symfony twig form_widget function": {
+        "scope": "twig",
+        "prefix": "form_widget",
+        "body": "{{ form_widget(${1:form}) }}",
+        "description": "Renders the widget of a form."
+    },
+    "symfony twig form_help function": {
+        "scope": "twig",
+        "prefix": "form_help",
+        "body": "{{ form_help(${1:form}) }}",
+        "description": "Renders the help of a form."
+    },
+    "symfony twig form_parent function": {
+        "scope": "twig",
+        "prefix": "form_parent",
+        "body": "{{ form_parent(${1:form_view}) }}",
+        "description": "Renders the parent of a form."
+    },
+    "symfony twig form_rest function": {
+        "scope": "twig",
+        "prefix": "form_rest",
+        "body": "{{ form_rest(${1:form}) }}",
+        "description": "Renders the rest of a form."
+    },
+    "symfony twig impersonation_exit_path function": {
+        "scope": "twig",
+        "prefix": "impersonation_exit_path",
+        "body": "{{ impersonation_exit_path(${1:exitTo = null}) }}",
+        "description": "Returns the path to exit the impersonation."
+    },
+    "symfony twig impersonation_exit_url function": {
+        "scope": "twig",
+        "prefix": "impersonation_exit_url",
+        "body": "{{ impersonation_exit_url(${1:exitTo = null}) }}",
+        "description": "Returns the URL to exit the impersonation."
+    },
+    "symfony twig is_granted function": {
+        "scope": "twig",
+        "prefix": "is_granted",
+        "body": "{{ is_granted(${1:role}, ${2:object = null}, ${3:field = null}) }}",
+        "description": "Checks if the current user has the given role."
+    },
+    "symfony twig logout_path function": {
+        "scope": "twig",
+        "prefix": "logout_path",
+        "body": "{{ logout_path(${1:key = null}) }}",
+        "description": "Returns the path to the logout page."
+    },
+    "symfony twig logout_url function": {
+        "scope": "twig",
+        "prefix": "logout_url",
+        "body": "{{ logout_url(${1:key = null}) }}",
+        "description": "Returns the URL to the logout page."
+    },
+    "symfony twig path function": {
+        "scope": "twig",
+        "prefix": "path",
+        "body": "{{ path(${1:name}, ${2:parameters = []}) }}",
+        "description": "Returns the path of a route."
+    },
+    "symfony twig relative_path function": {
+        "scope": "twig",
+        "prefix": "relative_path",
+        "body": "{{ relative_path(${1:path}) }}",
+        "description": "Returns the relative path of a resource."
+    },
+    "symfony twig render function": {
+        "scope": "twig",
+        "prefix": "render",
+        "body": "{{ render(${1:uri}, ${2:options = []}) }}",
+        "description": "Renders a URI."
+    },
+    "symfony twig render_esi function": {
+        "scope": "twig",
+        "prefix": "render_esi",
+        "body": "{{ render_esi(${1:uri}, ${2:options = []}) }}",
+        "description": "Renders a URI using the ESI protocol."
+    },
+    "symfony twig url function": {
+        "scope": "twig",
+        "prefix": "url",
+        "body": "{{ url(${1:name}, ${2:parameters = []}, ${3:schemeRelative = false}) }}",
+        "description": "Returns the URL of a route."
+    },
+}

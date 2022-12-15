@@ -1,0 +1,98 @@
+{
+    "twig loop index": {
+        "scope": "twig",
+        "prefix": "loop.index",
+        "body": [
+            "loop.index"
+        ],
+        "description": "The loop.index variable allows you to get the current iteration of the loop."
+    },
+    "twig loop index0": {
+        "scope": "twig",
+        "prefix": "loop.index0",
+        "body": [
+            "loop.index0"
+        ],
+        "description": "The loop.index0 variable allows you to get the current iteration of the loop (starting at 0)."
+    },
+    "twig loop revindex": {
+        "scope": "twig",
+        "prefix": "loop.revindex",
+        "body": [
+            "loop.revindex"
+        ],
+        "description": "The loop.revindex variable allows you to get the number of iterations from the end of the loop."
+    },
+    "twig loop revindex0": {
+        "scope": "twig",
+        "prefix": "loop.revindex0",
+        "body": [
+            "loop.revindex0"
+        ],
+        "description": "The loop.revindex0 variable allows you to get the number of iterations from the end of the loop (starting at 0)."
+    },
+    "twig loop first": {
+        "scope": "twig",
+        "prefix": "loop.first",
+        "body": [
+            "loop.first"
+        ],
+        "description": "The loop.first variable allows you to check if the loop is on the first iteration."
+    },
+    "twig loop last": {
+        "scope": "twig",
+        "prefix": "loop.last",
+        "body": [
+            "loop.last"
+        ],
+        "description": "The loop.last variable allows you to check if the loop is on the last iteration."
+    },
+    "twig loop length": {
+        "scope": "twig",
+        "prefix": "loop.length",
+        "body": [
+            "loop.length"
+        ],
+        "description": "The loop.length variable allows you to get the number of items in the loop."
+    },
+    "twig loop parent": {
+        "scope": "twig",
+        "prefix": "loop.parent",
+        "body": [
+            "loop.parent"
+        ],
+        "description": "The loop.parent variable allows you to get the parent loop."
+    },
+    "twig else if": {
+        "scope": "twig",
+        "prefix": "else if",
+        "body": [
+            "{% else if ${1:condition} %}",
+        ],
+        "description": "The else if tag allows you to add an else if condition to an if statement."
+    },
+    "twig else": {
+        "scope": "twig",
+        "prefix": "else",
+        "body": [
+            "{% else %}",
+        ],
+        "description": "The else tag allows you to add an else condition to an if statement."
+    },
+    "twig show": {
+        "scope": "twig",
+        "prefix": "show",
+        "body": [
+            "{{ $1 }}"
+        ],
+        "description": "The show function allows you to display a variable in a safe way."
+    },
+    "twig execute": {
+        "scope": "twig",
+        "prefix": "execute",
+        "body": [
+            "{% $1 %}"
+        ],
+        "description": "The execute function allows you to execute a variable as a function."
+    },
+}
