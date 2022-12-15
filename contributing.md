@@ -21,7 +21,7 @@ If you spot a problem, search if an issue already exists. If a related issue doe
 5. Add your file path to `package.json`
 ```json
 {
-    "language": "php",
+    "language": "twig",
     "path": "./snippets/contributes/YOUR-GH-USERNAME.code-snippets"
 }
 ```
