@@ -13,7 +13,7 @@ import { Loader } from "../Snippet/Loader";
 import { Snippet } from "../Snippet/Snippet";
 
 
-export class SymfonyCompletionProvider implements CompletionItemProvider {
+export class CraftCompletionProvider implements CompletionItemProvider {
 
     public constructor() {
     }
@@ -23,8 +23,7 @@ export class SymfonyCompletionProvider implements CompletionItemProvider {
     }
 
     private load(): CompletionList<CompletionItem> {
-        let snippets: Snippet[] = Loader.loadSymfonySnippets();
+        let snippets: Snippet[] = Loader.loadCraftSnippets();
         return new CompletionItemConverter(snippets).convertAll();
     }
-
 }
