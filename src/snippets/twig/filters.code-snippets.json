@@ -1,0 +1,373 @@
+[
+    {
+        "title": "twig abs filter",
+        "prefix": "abs",
+        "body": "{{ ${1:variable}|abs }}",
+        "description": "The abs filter returns the absolute value of a number.",
+        "doc": "abs"
+    },
+    {
+        "title": "twig batch filter",
+        "prefix": "batch",
+        "body": "{{ ${1:variable}|batch(${2:size}) }}",
+        "description": "The batch filter splits a sequence into smaller sequences of a given size.",
+        "doc": "batch"
+    },
+    {
+        "title": "twig capitalize filter",
+        "prefix": "capitalize",
+        "body": "{{ ${1:variable}|capitalize }}",
+        "description": "The capitalize filter capitalizes the first letter of a string.",
+        "doc": "capitalize"
+    },
+    {
+        "title": "twig column filter",
+        "prefix": "column",
+        "body": "{{ ${1:variable}|column('${2:column}') }}",
+        "description": "The column filter returns the values from a single column of a sequence.",
+        "doc": "column"
+    },
+    {
+        "title": "twig convert_encoding filter",
+        "prefix": "convert_encoding",
+        "body": "{{ ${1:variable}|convert_encoding('${2:to_encoding}', '${3:from_encoding}') }}",
+        "description": "The convert_encoding filter converts a string to a different character encoding.",
+        "doc": "convert_encoding"
+    },
+    {
+        "title": "twig country_name filter",
+        "prefix": "country_name",
+        "body": "{{ ${1:variable}|country_name('${2:local}') }}",
+        "description": "The country_name filter returns the name of a country.",
+        "doc": "country_name"
+    },
+    {
+        "title": "twig currency_name filter",
+        "prefix": "currency_name",
+        "body": "{{ ${1:variable}|currency_name('${2:local}') }}",
+        "description": "The currency_name filter returns the name of a currency.",
+        "doc": "currency_name"
+    },
+    {
+        "title": "twig currency_symbol filter",
+        "prefix": "currency_symbol",
+        "body": "{{ ${1:variable}|currency_symbol('${2:local}') }}",
+        "description": "The currency_symbol filter returns the symbol of a currency.",
+        "doc": "currency_symbol"
+    },
+    {
+        "title": "twig data_uri filter",
+        "prefix": "data_uri",
+        "body": "{{ ${1:variable}|data_uri }}",
+        "description": "The data_uri filter encodes a file as a data URI.",
+        "doc": "data_uri"
+    },
+    {
+        "title": "twig date filter",
+        "prefix": "date",
+        "body": "{{ ${1:variable}|date('${2:format}', '${3:timezone}') }}",
+        "description": "The date filter formats a date.",
+        "doc": "date"
+    },
+    {
+        "title": "twig date_modify filter",
+        "prefix": "date_modify",
+        "body": "{{ ${1:variable}|date_modify('${2:modifier}') }}",
+        "description": "The date_modify filter modifies a date.",
+        "doc": "date_modify"
+    },
+    {
+        "title": "twig default filter",
+        "prefix": "default",
+        "body": "{{ ${1:variable}|default('${2:default_value}') }}",
+        "description": "The default filter returns the default value when the value of the variable is null.",
+        "doc": "default"
+    },
+    {
+        "title": "twig escape filter",
+        "prefix": "escape",
+        "body": "{{ ${1:variable}|escape('${2:strategy}') }}",
+        "description": "The escape filter escapes a string.",
+        "doc": "escape"
+    },
+    {
+        "title": "twig first filter",
+        "prefix": "first",
+        "body": "{{ ${1:variable}|first }}",
+        "description": "The first filter returns the first element of a sequence.",
+        "doc": "first"
+    },
+    {
+        "title": "twig format filter",
+        "prefix": "format",
+        "body": "{{ ${1:variable}|format('${2:format}') }}",
+        "description": "The format filter formats a number.",
+        "doc": "format"
+    },
+    {
+        "title": "twig format_currency filter",
+        "prefix": "format_currency",
+        "body": "{{ ${1:variable}|format_currency('${2:currency}', {${3:attr}: '${4:attrValue}'}) }}",
+        "description": "The format_currency filter formats a number as a currency amount.",
+        "doc": "format_currency"
+    },
+    {
+        "title": "twig format_date filter",
+        "prefix": "format_date",
+        "body": "{{ ${1:variable}|format_date('${2:format}', '${3:timezone}', '${4:locale}') }}",
+        "description": "The format_date filter formats a date.",
+        "doc": "format_date"
+    },
+    {
+        "title": "twig format_datetime filter",
+        "prefix": "format_datetime",
+        "body": "{{ ${1:variable}|format_datetime() }}",
+        "description": "The format_datetime filter formats a date and time.",
+        "doc": "format_datetime"
+    },
+    {
+        "title": "twig format_number filter",
+        "prefix": "format_number",
+        "body": "{{ ${1:variable}|format_number('${2:decimals}', '${3:decimal_point}', '${4:thousands_separator}') }}",
+        "description": "The format_number filter formats a number.",
+        "doc": "format_number"
+    },
+    {
+        "title": "twig format_time filter",
+        "prefix": "format_time",
+        "body": "{{ ${1:variable}|format_time('${2:format}', '${3:timezone}', '${4:locale}') }}",
+        "description": "The format_time filter formats a time.",
+        "doc": "format_time"
+    },
+    {
+        "title": "twig html_to_markdown filter",
+        "prefix": "html_to_markdown",
+        "body": "{{ ${1:variable}|html_to_markdown }}",
+        "description": "The html_to_markdown filter converts HTML to Markdown.",
+        "doc": "html_to_markdown"
+    },
+    {
+        "title": "twig inky_to_html filter",
+        "prefix": "inky_to_html",
+        "body": "{{ ${1:variable}|inky_to_html }}",
+        "description": "The inky_to_html filter converts Inky code to HTML.",
+        "doc": "inky_to_html"
+    },
+    {
+        "title": "twig inline_css filter",
+        "prefix": "inline_css",
+        "body": "{{ ${1:variable}|inline_css }}",
+        "description": "The inline_css filter inlines CSS styles.",
+        "doc": "inline_css"
+    },
+    {
+        "title": "twig join filter",
+        "prefix": "join",
+        "body": "{{ ${1:variable}|join('${2:glue}', '${3:and}') }}",
+        "description": "The join filter concatenates the elements of a sequence.",
+        "doc": "join"
+    },
+    {
+        "title": "twig json_encode filter",
+        "prefix": "json_encode",
+        "body": "{{ ${1:variable}|json_encode }}",
+        "description": "The json_encode filter encodes a variable as JSON.",
+        "doc": "json_encode"
+    },
+    {
+        "title": "twig keys filter",
+        "prefix": "keys",
+        "body": "{{ ${1:variable}|keys }}",
+        "description": "The keys filter returns the keys of a map.",
+        "doc": "keys"
+    },
+    {
+        "title": "twig language_name filter",
+        "prefix": "language_name",
+        "body": "{{ '${1:locale}'|language_name('${2:locale}') }}",
+        "description": "The language_name filter returns the name of a language.",
+        "doc": "language_name"
+    },
+    {
+        "title": "twig last filter",
+        "prefix": "last",
+        "body": "{{ ${1:variable}|last }}",
+        "description": "The last filter returns the last element of a sequence.",
+        "doc": "last"
+    },
+    {
+        "title": "twig length filter",
+        "prefix": "length",
+        "body": "{{ ${1:variable}|length }}",
+        "description": "The length filter returns the length of a sequence.",
+        "doc": "length"
+    },
+    {
+        "title": "twig locale_name filter",
+        "prefix": "locale_name",
+        "body": "{{ '${1:locale}'|locale_name('${2:locale}') }}",
+        "description": "The locale_name filter returns the name of a locale.",
+        "doc": "locale_name"
+    },
+    {
+        "title": "twig lower filter",
+        "prefix": "lower",
+        "body": "{{ ${1:variable}|lower }}",
+        "description": "The lower filter converts a string to lowercase.",
+        "doc": "lower"
+    },
+    {
+        "title": "twig map filter",
+        "prefix": "map",
+        "body": "{{ ${1:variable}|map((value, key) => '${2:#{key} #{value}'}|join('${3:, }')) }}",
+        "description": "The map filter applies a filter to each element of a sequence.",
+        "doc": "map"
+    },
+    {
+        "title": "twig markdown_to_html filter",
+        "prefix": "markdown_to_html",
+        "body": "{{ ${1:variable}|markdown_to_html }}",
+        "description": "The markdown_to_html filter converts Markdown to HTML.",
+        "doc": "markdown_to_html"
+    },
+    {
+        "title": "twig merge filter",
+        "prefix": "merge",
+        "body": "{{ ${1:variable}|merge(${2:array}) }}",
+        "description": "The merge filter merges two arrays.",
+        "doc": "merge"
+    },
+    {
+        "title": "twig nl2br filter",
+        "prefix": "nl2br",
+        "body": "{{ ${1:variable}|nl2br }}",
+        "description": "The nl2br filter converts newlines to HTML line breaks.",
+        "doc": "nl2br"
+    },
+    {
+        "title": "twig number_format filter",
+        "prefix": "number_format",
+        "body": "{{ ${1:variable}|number_format('${2:decimals}', '${3:decimal_point}', '${4:thousands_separator}') }}",
+        "description": "The number_format filter formats a number.",
+        "doc": "number_format"
+    },
+    {
+        "title": "twig raw filter",
+        "prefix": "raw",
+        "body": "{{ ${1:variable}|raw }}",
+        "description": "The raw filter marks a variable as safe.",
+        "doc": "raw"
+    },
+    {
+        "title": "twig reduce filter",
+        "prefix": "reduce",
+        "body": "{{ ${1:variable}|reduce((carry, item) => '${2:#{carry} #{item}'}|join('${3:, }')) }}",
+        "description": "The reduce filter reduces a sequence to a single value.",
+        "doc": "reduce"
+    },
+    {
+        "title": "twig replace filter",
+        "prefix": "replace",
+        "body": "{{ ${1:variable}|replace({'${2:search}': '${3:replace}'}) }}",
+        "description": "The replace filter replaces values in a string.",
+        "doc": "replace"
+    },
+    {
+        "title": "twig reverse filter",
+        "prefix": "reverse",
+        "body": "{{ ${1:variable}|reverse }}",
+        "description": "The reverse filter reverses a sequence.",
+        "doc": "reverse"
+    },
+    {
+        "title": "twig round filter",
+        "prefix": "round",
+        "body": "{{ ${1:variable}|round('${2:precision}', '${3:method}') }}",
+        "description": "The round filter rounds a number.",
+        "doc": "round"
+    },
+    {
+        "title": "twig slice filter",
+        "prefix": "slice",
+        "body": "{{ ${1:variable}|slice('${2:offset}', '${3:length}') }}",
+        "description": "The slice filter slices a sequence.",
+        "doc": "slice"
+    },
+    {
+        "title": "twig slug filter",
+        "prefix": "slug",
+        "body": "{{ ${1:variable}|slug('${2:separator}', '${3:locale}') }}",
+        "description": "The slug filter converts a string to a slug.",
+        "doc": "slug"
+    },
+    {
+        "title": "twig sort filter",
+        "prefix": "sort",
+        "body": "{{ ${1:variable}|sort }}",
+        "description": "The sort filter sorts a sequence.",
+        "doc": "sort"
+    },
+    {
+        "title": "twig spaceless filter",
+        "prefix": "spaceless",
+        "body": "{{ ${1:variable}|spaceless }}",
+        "description": "The spaceless filter removes whitespace between HTML tags.",
+        "doc": "spaceless"
+    },
+    {
+        "title": "twig split filter",
+        "prefix": "split",
+        "body": "{{ ${1:variable}|split('${2:delimiter}') }}",
+        "description": "The split filter splits a string into an array.",
+        "doc": "split"
+    },
+    {
+        "title": "twig striptags filter",
+        "prefix": "striptags",
+        "body": "{{ ${1:variable}|striptags }}",
+        "description": "The striptags filter strips HTML and PHP tags from a string.",
+        "doc": "striptags"
+    },
+    {
+        "title": "twig timezone_name filter",
+        "prefix": "timezone_name",
+        "body": "{{ '${1:timezone}'|timezone_name('${2:locale}') }}",
+        "description": "The timezone_name filter returns the name of a timezone.",
+        "doc": "timezone_name"
+    },
+    {
+        "title": "twig title filter",
+        "prefix": "title",
+        "body": "{{ ${1:variable}|title }}",
+        "description": "The title filter converts a string to title case.",
+        "doc": "title"
+    },
+    {
+        "title": "twig trim filter",
+        "prefix": "trim",
+        "body": "{{ ${1:variable}|trim('${2:character_mask}') }}",
+        "description": "The trim filter removes whitespace from the beginning and end of a string.",
+        "doc": "trim"
+    },
+    {
+        "title": "twig u filter",
+        "prefix": "u",
+        "body": "{{ '${1:variable}'|u.${2:method}(${3:arguments}) }}",
+        "description": "The u filter converts a string to a Symfony String object.",
+        "doc": "u"
+    },
+    {
+        "title": "twig upper filter",
+        "prefix": "upper",
+        "body": "{{ ${1:variable}|upper }}",
+        "description": "The upper filter converts a string to uppercase.",
+        "doc": "upper"
+    },
+    {
+        "title": "twig url_encode filter",
+        "prefix": "url_encode",
+        "body": "{{ ${1:variable}|url_encode }}",
+        "description": "The url_encode filter encodes a string for use in a URL.",
+        "doc": "url_encode"
+    }
+]

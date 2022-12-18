@@ -16,14 +16,15 @@ If you spot a problem, search if an issue already exists. If a related issue doe
 
  `git clone https://github.com/YOUR-GH-USERNAME/twig-code-snippets.git`
 
-3. Create `YOUR-GH-USERNAME.code-snippets` file inside `twig-code-snippets/snippets/contributes`
+3. Create `YOUR-GH-USERNAME.code-snippets.json` file inside `twig-code-snippets/snippets/contributes`
 4. Add your snippets using vscode snippets format
-5. Add your file path to `package.json`
-```json
-{
-    "language": "twig",
-    "path": "./snippets/contributes/YOUR-GH-USERNAME.code-snippets"
-}
+5. Add your file path to `src/Provider/Snippet/Loader.ts` inside `loadContributeSnippets` method
+```ts
+    public static loadContributeSnippets(): Snippet[] {
+        return [
+            ...require('../../snippets/contributes/YOUR-GH-USERNAME.code-snippets.json'),
+        ];
+    }
 ```
 6. Commit your changes to your forked repository 
 7. Create new [pull request](https://github.com/nalabdou/twig-code-snippets/pulls) 

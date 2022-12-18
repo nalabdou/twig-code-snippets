@@ -1,42 +1,42 @@
-{
-    "symfony twig encore_entry_link_tags": {
+[
+    {
+        "title": "symfony twig encore_entry_link_tags",
         "prefix": "encore_entry_link_tags",
         "body": [
             "{{ encore_entry_link_tags('${1:app}') }}"
         ],
-        "scope": "twig",
         "description": "Renders the HTML link tags for the given entry name."
     },
-    "symfony twig encore_entry_script_tags": {
+    {
+        "title": "symfony twig encore_entry_script_tags",
         "prefix": "encore_entry_script_tags",
         "body": [
             "{{ encore_entry_script_tags('${1:app}') }}"
         ],
-        "scope": "twig",
         "description": "Renders the HTML script tags for the given entry name."
     },
-    "symfony twig encore_entry_js_files": {
+    {
+        "title": "symfony twig encore_entry_js_files",
         "prefix": "encore_entry_js_files",
         "body": [
             "{{ encore_entry_js_files('${1:app}') }}"
         ],
-        "scope": "twig",
         "description": "Renders the HTML script tags for the given entry name."
     },
-    "symfony twig encore_entry_css_files": {
+    {
+        "title": "symfony twig encore_entry_css_files",
         "prefix": "encore_entry_css_files",
         "body": [
             "{{ encore_entry_css_files('${1:app}') }}"
         ],
-        "scope": "twig",
         "description": "Renders the HTML link tags for the given entry name."
     },
-    "symfony twig encore_entry_exists": {
+    {
+        "title": "symfony twig encore_entry_exists",
         "prefix": "encore_entry_exists",
         "body": [
             "{{ encore_entry_exists('${1:app}') }}"
         ],
-        "scope": "twig",
         "description": "Returns true if the given entry exists."
-    },
-}
+    }
+]

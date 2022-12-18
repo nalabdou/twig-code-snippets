@@ -1,0 +1,107 @@
+[
+    {
+        "title": "symfony twig abbr_class filter",
+        "prefix": "abbr_class",
+        "body": "{{ ${1:object} |abbr_class }}",
+        "description": "Abbreviates a fully-qualified class name.",
+        "doc": "#abbr-class"
+    },
+    {
+        "title": "symfony twig abbr_method filter",
+        "prefix": "abbr_method",
+        "body": "{{ ${1:method} |abbr_method }}",
+        "description": "Abbreviates a method.",
+        "doc": "#abbr-method"
+    },
+    {
+        "title": "symfony twig file_excerpt filter",
+        "prefix": "file_excerpt",
+        "body": "{{ ${1:file} |file_excerpt(${2:line}, ${3:srcContext = 3}) }}",
+        "description": "Returns a snippet of a file around the given line number.",
+        "doc": "#file-excerpt"
+    },
+    {
+        "title": "symfony twig file_link filter",
+        "prefix": "file_link",
+        "body": "{{ ${1:file} |file_link(${2:line}) }}",
+        "description": "Generates a link to the given file and line number.",
+        "doc": "#file-link"
+    },
+    {
+        "title": "symfony twig file_relative filter",
+        "prefix": "file_relative",
+        "body": "{{ ${1:file} |file_relative }}",
+        "description": "Returns the relative path of a file.",
+        "doc": "#file-relative"
+    },
+    {
+        "title": "symfony twig format_args filter",
+        "prefix": "format_args",
+        "body": "{{ ${1:args} |format_args }}",
+        "description": "Formats a set of arguments.",
+        "doc": "#format-args"
+    },
+    {
+        "title": "symfony twig format_args_as_text filter",
+        "prefix": "format_args_as_text",
+        "body": "{{ ${1:args} |format_args_as_text }}",
+        "description": "Formats a set of arguments as text.",
+        "doc": "#format-args-as-text"
+    },
+    {
+        "title": "symfony twig format_file filter",
+        "prefix": "format_file",
+        "body": "{{ ${1:file} |format_file }}",
+        "description": "Formats a file path.",
+        "doc": "#format-file"
+    },
+    {
+        "title": "symfony twig format_file_from_text filter",
+        "prefix": "format_file_from_text",
+        "body": "{{ ${1:text} |format_file_from_text }}",
+        "description": "Formats a file path from a text.",
+        "doc": "#format-file-from-text"
+    },
+    {
+        "title": "symfony twig humanize filter",
+        "prefix": "humanize",
+        "body": "{{ ${1:text} |humanize }}",
+        "description": "Converts a value to human-readable text.",
+        "doc": "#humanize"
+    },
+    {
+        "title": "symfony twig sanitize_html filter",
+        "prefix": "sanitize_html",
+        "body": "{{ ${1:body} |sanitize_html(${2:sanitizer = \"default\"}) }}",
+        "description": "Sanitizes a string.",
+        "doc": "#sanitize-html"
+    },
+    {
+        "title": "symfony twig serialize filter",
+        "prefix": "serialize",
+        "body": "{{ ${1:object} |serialize(${2:format = \"json\"}, ${3:context = []}) }}",
+        "description": "Serializes a variable.",
+        "doc": "#serialize"
+    },
+    {
+        "title": "symfony twig trans filter",
+        "prefix": "trans",
+        "body": "{{ ${1:message} |trans(arguments = [], domain = null, locale = null) }}",
+        "description": "Translates the given message.",
+        "doc": "#trans"
+    },
+    {
+        "title": "symfony twig yaml_encode filter",
+        "prefix": "yaml_encode",
+        "body": "{{ ${1:object} |yaml_encode(${2:inline = 2}, ${3:flags = 0}) }}",
+        "description": "Encodes a variable into YAML.",
+        "doc": "#yaml-encode"
+    },
+    {
+        "title": "symfony twig yaml_dump filter",
+        "prefix": "yaml_dump",
+        "body": "{{ ${1:object} |yaml_dump(${2:inline = 2}, ${3:flags = 0}) }}",
+        "description": "Dumps a variable into YAML.",
+        "doc": "#yaml-dump"
+    }
+]

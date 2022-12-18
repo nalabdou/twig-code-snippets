@@ -2,7 +2,7 @@
   "name": "twig-code-snippets",
   "displayName": "Twig code snippets",
   "description": "Twig code snippets :art:",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "icon": "twig.png",
   "publisher": "nadim-vscode",
   "author": {
@@ -28,49 +28,87 @@
     "symfony",
     "twig"
   ],
+  "activationEvents": [
+    "onLanguage:twig"
+  ],
+  "main": "./dist/extension.js",
   "contributes": {
-    "snippets": [
+    "configuration": [
+      {
+        "title": "twigCodeSnippets",
+        "properties": {
+          "twigCodeSnippets.enableTwig": {
+            "type": "boolean",
+            "default": true,
+            "description": "Enable/disable Twig core code snippets"
+          },
+          "twigCodeSnippets.enableSymfony": {
+            "type": "boolean",
+            "default": true,
+            "description": "Enable/disable Symfony code snippets"
+          },
+          "twigCodeSnippets.enableHover": {
+            "type": "boolean",
+            "default": true,
+            "description": "Enable/disable hover information"
+          },
+          "twigCodeSnippets.enableContribute": {
+            "type": "boolean",
+            "default": false,
+            "description": "Enable/disable contributes code snippets"
+          }
+        }
+      }
+    ],
+    "languages": [
+      {
+        "id": "twig",
+        "aliases": [
+          "HTML (Twig)",
+          "twig"
+        ],
+        "extensions": [
+          ".twig",
+          ".html.twig"
+        ],
+        "configuration": "./languages/twig.configuration.json"
+      }
+    ],
+    "grammars": [
       {
         "language": "twig",
-        "path": "./snippets/twig/tags.code-snippets"
-      },
-      {
-        "language": "twig",
-        "path": "./snippets/twig/filters.code-snippets"
-      },
-      {
-        "language": "twig",
-        "path": "./snippets/twig/functions.code-snippets"
-      },
-      {
-        "language": "twig",
-        "path": "./snippets/twig/tests.code-snippets"
-      },
-      {
-        "language": "twig",
-        "path": "./snippets/twig/extra.code-snippets"
-      },
-      {
-        "language": "twig",
-        "path": "./snippets/symfony/tags.code-snippets"
-      },
-      {
-        "language": "twig",
-        "path": "./snippets/symfony/filters.code-snippets"
-      },
-      {
-        "language": "twig",
-        "path": "./snippets/symfony/functions.code-snippets"
-      },
-      {
-        "language": "twig",
-        "path": "./snippets/symfony/tests.code-snippets"
-      },
-      {
-        "language": "twig",
-        "path": "./snippets/symfony/extra.code-snippets"
+        "scopeName": "text.html.twig",
+        "path": "./syntaxes/twig.tmLanguage",
+        "embeddedLanguages": {
+          "source.json": "json",
+          "source.css": "css",
+          "source.css.scss": "scss",
+          "source.js": "javascript",
+          "source.ts": "typescript"
+        }
       }
     ]
   },
-  "qna": "marketplace"
+  "qna": "marketplace",
+  "scripts": {
+    "vscode:prepublish": "pnpm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/glob": "^8.0.0",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.28.0",
+    "glob": "^8.0.3",
+    "typescript": "^4.9.3",
+    "ts-loader": "^9.4.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0"
+  }
 }
