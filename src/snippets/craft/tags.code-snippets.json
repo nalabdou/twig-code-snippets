@@ -1,0 +1,310 @@
+[
+    {
+        "title": "craft twig cache tag",
+        "prefix": "cache",
+        "body": [
+            "{% cache %}",
+            "\t$0",
+            "{% endcache %}"
+        ],
+        "description": "This tag will cache a portion of your template, which can improve performance for subsequent requests because they’ll have less work to do.",
+        "doc": "tags.html#cache"
+    },
+    {
+        "title": "craft twig cache globally",
+        "prefix": "cache:globally",
+        "body": "{% cache globally %}",
+        "description": "Caches the output globally (for the current site locale), rather than on a per-URL basis.",
+        "doc": "tags.html#cache"
+    },
+    {
+        "title": "craft twig cache using key",
+        "prefix": "cache:key",
+        "body": [
+            "{% cache using key \"${1:cache-key}\" %}",
+            "\t$0",
+            "{% endcache %}"
+        ],
+        "description": "Specifies the name of the key the cache should use. When the key changes, the tag’s contents are re-rendered. If this parameter is not provided, a random key will be generated each time Twig re-parses the template.",
+        "doc": "tags.html#cache"
+    },
+    {
+        "title": "craft twig cache for",
+        "prefix": "cache:for",
+        "body": [
+            "{% cache for ${1:duration} %}",
+            "\t$0",
+            "{% endcache %}"
+        ],
+        "description": "Specifies the duration of time the cache should be valid for. This can be a number of seconds, or a number of minutes, hours, days, weeks, months, or years. For example, 1 day, 2 weeks, 3 months, 4 years, etc.",
+        "doc": "tags.html#cache"
+    },
+    {
+        "title": "craft twig cache until",
+        "prefix": "cache:until",
+        "body": [
+            "{% cache until ${1:dateTime} %}",
+            "\t$0",
+            "{% endcache %}"
+        ],
+        "description": "Specifies the date and time the cache should be valid until. This can be a date and time in the future, or a date and time in the past. If the date and time is in the past, the cache will be considered invalid and the tag’s contents will be re-rendered.",
+        "doc": "tags.html#cache"
+    },
+    {
+        "title": "craft twig cache unless ",
+        "prefix": "cache:unless",
+        "body": [
+            "{% cache unless ${1:condition} %}",
+            "\t$0",
+            "{% endcache %}"
+        ],
+        "description": "Specifies a condition that, if true, will cause the cache to be considered invalid and the tag’s contents to be re-rendered.",
+        "doc": "tags.html#cache"
+    },
+    {
+        "title": "craft twig css tag",
+        "prefix": "css",
+        "body": [
+            "{% css %}",
+            "\t$0",
+            "{% endcss %}"
+        ],
+        "description": "This tag will output a <code><link></code> tag for the specified CSS file.",
+        "doc": "tags.html#css"
+    },
+    {
+        "title": "craft twig css with",
+        "prefix": "css:with",
+        "body": [
+            "{% css with ${1:param} %}",
+            "\t$0",
+            "{% endcss %}"
+        ],
+        "description": "This tag will output a <code>link</code> tag for the specified CSS file, with the specified parameters.",
+        "doc": "tags.html#css"
+    },
+    {
+        "title": "craft twig dd tag",
+        "prefix": "dd",
+        "body": "{% dd ${1:variable} %}",
+        "description": "This tag will dump the contents of a variable and then die.",
+        "doc": "tags.html#dd"
+    },
+    {
+        "title": "craft twig exit tag",
+        "prefix": "exit",
+        "body": "{% exit ${1:${2|404,403,500,501|}} %}",
+        "description": "This tag will prevent the rest of the template from executing, and end the request.",
+        "doc": "tags.html#exit"
+    },
+    {
+        "title": "craft twig header tag",
+        "prefix": "header",
+        "body": "{% header ${1:header} %}",
+        "description": "This tag will set a new HTTP header on the response.",
+        "doc": "tags.html#header"
+    },
+    {
+        "title": "craft twig hook tag",
+        "prefix": "hook",
+        "body": "{% hook '${1:hook-name}' %}",
+        "description": "This tag gives plugins and modules an opportunity to hook into the template, to either return additional HTML or make changes to the available template variables.",
+        "doc": "tags.html#hook"
+    },
+    {
+        "title": "craft twig html tag",
+        "prefix": "html",
+        "body": [
+            "{% html ${1: at ${2|head,beginBody,endBody|}} %}",
+            "\t$0",
+            "{% endhtml %}"
+        ],
+        "description": "The <code>{% html %}</code> tag can be used to register arbitrary HTML code on the page.",
+        "doc": "tags.html#html"
+    },
+    {
+        "title": "craft twig js tag",
+        "prefix": "js",
+        "body": [
+            "{% js ${1: at ${2|head,beginBody,endBody|}} ${3: on ${4|load,ready|}} ${5: with param } %}",
+            "\t$0",
+            "{% endjs %}"
+        ],
+        "description": "The <code>{% js %}</code> tag can be used to register a JavaScript file or a JavaScript code block.",
+        "doc": "tags.html#js"
+    },
+    {
+        "title": "craft twig namespace tag",
+        "prefix": "namespace",
+        "body": [
+            "{% namespace ${1:namespace} ${2:withClasses} %}",
+            "\t$0",
+            "{% endnamespace %}"
+        ],
+        "description": "The <code>{% namespace %}</code> tag can be used to namespace input names and other HTML attributes, as well as CSS selectors.",
+        "doc": "tags.html#namespace"
+    },
+    {
+        "title": "craft twig nav tag",
+        "prefix": "nav",
+        "body": [
+            "{% nav ${1:entry} in ${2:entries} %}",
+            "\t$0",
+            "{% endnav %}"
+        ],
+        "description": "The <code>{% nav %}</code> tag can be used to loop through a set of entries, and output a navigation menu.",
+        "doc": "tags.html#nav"
+    },
+    {
+        "title": "craft twig nav ifchildren",
+        "prefix": "ifchildren",
+        "body": [
+            "{% ifchildren %}",
+            "\t$0",
+            "{% endifchildren %}"
+        ],
+        "description": "The <code>{% ifchildren %}</code> tag can be used to check if the current entry has any children.",
+        "doc": "tags.html#nav"
+    },
+    {
+        "title": "craft twig nav children",
+        "prefix": "children",
+        "body": "{% children %}",
+        "description": "The <code>{% children %}</code> tag can be used to output the children of the current entry.",
+        "doc": "tags.html#nav"
+    },
+    {
+        "title": "craft twig paginate tag",
+        "prefix": "paginate",
+        "body": "{% paginate query as ${1:pageInfo}, ${2:pageEntries} %}",
+        "description": "This tag makes it easy to paginate query results across multiple pages.",
+        "doc": "tags.html#paginate"
+    },
+    {
+        "title": "craft twig paginate pageInfo",
+        "prefix": "pageInfo",
+        "body": "{{ ${1:pageInfo}.${2|first,last,total,currentPage,totalPages,prevUrl,nextUrl,firstUrl,lastUrl,getPageUrl(${3:page}),getPrevUrls(),getNextUrls(),getRangeUrls(),getDynamicRangeUrls()|} }}",
+        "description": "The <code>{{ pageInfo.* }}</code> tag can be used to get respective information about the current pagination.",
+        "doc": "tags.html#paginate"
+    },
+    {
+        "title": "craft twig redirect tag",
+        "prefix": "redirect",
+        "body": "{% redirect ${1:url} ${2:${3|301,302|}} ${4:with notice $0} %}",
+        "description": "This tag will redirect the browser to a different URL.",
+        "doc": "tags.html#redirect"
+    },
+    {
+        "title": "craft twig requireAdmin tag",
+        "prefix": "requireAdmin",
+        "body": "{% requireAdmin %}",
+        "description": [
+            "This tag will ensure that an admin user is logged in. If the user is not logged in, they’ll",
+            "be redirected to the Login page specified by your <a href=\"https://craftcms.com/docs/4.x/config/general.html#loginpath\">loginPath</a> config setting and returned to",
+            "the original page after logging in as an admin.",
+            "\r",
+            "A user that’s already logged in but not an admin will get a 403 response."
+        ],
+        "doc": "tags.html#requireAdmin"
+    },
+    {
+        "title": "craft twig requireEdition tag",
+        "prefix": "requireEdition",
+        "body": "{% requireEdition ${1|0,1|} %}",
+        "description": [
+            "Requires Craft’s edition to be equal to or better than what’s specified.",
+            "\r",
+            "If the Craft edition does not meet the requirement, the visitor will get a 404 response.",
+            "\r",
+            "<ul>",
+            "\r",
+            "<li>0 = Craft Solo</li>",
+            "\r",
+            "<li>1 = Craft Pro</li>",
+            "\r",
+            "</ul>"
+        ],
+        "doc": "tags.html#requireEdition"
+    },
+    {
+        "title": "craft twig requireGuest tag",
+        "prefix": "requireGuest",
+        "body": "{% requireGuest %}",
+        "description": [
+            "This tag will ensure that the user is not logged in. If they’re already logged in,",
+            "they’ll be redirected to the page specified by your <a href=\"https://craftcms.com/docs/4.x/config/general.html#postloginredirect\">postLoginRedirect</a> config setting."
+        ],
+        "doc": "tags.html#requireGuest"
+    },
+    {
+        "title": "craft twig requireLogin tag",
+        "prefix": "requireLogin",
+        "body": "{% requireLogin %}",
+        "description": [
+            "This tag will ensure that the user is logged in. If they aren’t, they’ll be redirected to a",
+            "Login page and returned to the original page after successfully logging in.",
+            "You can place this tag anywhere in your template, including within a conditional. If/when",
+            "Twig gets to it, the login enforcement will take place.",
+            "\r",
+            "The login page location is based on your loginPath config setting. If you do not set",
+            "loginPath, it defaults to login. That will throw a 404 error if you have not handled the",
+            "login route with a custom template. To use the control panel’s login form, set it to admin/",
+            "login or [your cpTrigger]/login."
+        ],
+        "doc": "tags.html#requireLogin"
+    },
+    {
+        "title": "craft twig requirePermission tag",
+        "prefix": "requirePermission",
+        "body": "{% requirePermission ${1:permission} %}",
+        "description": [
+            "This tag will ensure that the current user is logged in with an account that has a given permission.",
+            "The user can have the permission either directly or through one of their user groups. If they don’t",
+            "have it, a 403 (Forbidden) error will be served.",
+            "See the <a href=\"https://craftcms.com/docs/4.x/users.html#permissions\">Users</a> page for a list of available permissions."
+        ],
+        "doc": "tags.html#requirepermission"
+    },
+    {
+        "title": "craft twig script tag",
+        "prefix": "script",
+        "body": [
+            "{% script ${1:with ${2:params}} %}",
+            "\t$0",
+            "{% endscript %}"
+        ],
+        "description": "Similar to the <code>{% js %}</code> tag, but with full control over the resulting <code>script</code> tag’s attributes.",
+        "doc": "tags.html#script"
+    },
+    {
+        "title": "craft twig switch tag",
+        "prefix": "switch",
+        "body": [
+            "{% switch ${1:condition} %}",
+            "\t{% case ${2:case} %}",
+            "\t\t$1",
+            "\t{% break %}",
+            "\t{% default %}",
+            "\t\t$0",
+            "\t{% break %}",
+            "{% endswitch %}"
+        ],
+        "description": "The <code>{% switch %}</code> tag is used to conditionally execute different blocks of code based on a given condition.",
+        "doc": "tags.html#switch"
+    },
+    {
+        "title": "craft twig tag tag",
+        "prefix": "tag",
+        "body": [
+            "{% tag ${1:tag} ${2:with ${3:params}} %}",
+            "\t$0",
+            "{% endtag %}"
+        ],
+        "description": [
+            "The <code>{% tag %}</code> tag can be used to render an HTML element in a template.",
+            "\r",
+            "It’s similar to the tag function, however the <code>{% tag %}</code> tag is better suited for cases where the tag contents need to be dynamic."
+        ],
+        "doc": "tags.html#tag"
+    }
+]

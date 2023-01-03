@@ -1,0 +1,481 @@
+[
+    {
+        "title": "craft twig address filter",
+        "prefix": "address",
+        "body": "{{ myAddress|address }}",
+        "description": "Applies formatting to an <a href=\"https://craftcms.com/docs/4.x/addresses.html#address-formatter\">Address</a>.",
+        "doc": "filters.html#address"
+    },
+    {
+        "title": "craft twig append filter",
+        "prefix": "append",
+        "body": "{{ element|append('foo',${1|'keep','replace'|}) }}",
+        "description": "Appends HTML to the end of another element.",
+        "doc": "filters.html#append"
+    },
+    {
+        "title": "craft twig ascii filter",
+        "prefix": "ascii",
+        "body": "{{ myString|ascii${1:('${2:local}')} }}",
+        "description": "Converts a string to ASCII characters.",
+        "doc": "filters.html#ascii"
+    },
+    {
+        "title": "craft twig atom filter",
+        "prefix": "atom",
+        "body": "{{ myDate|atom }}",
+        "description": "Converts a date to an ISO-8601 timestamp <code>(e.g. 2019-01-29T10:00:00-08:00)</code>, which should be used for Atom feeds, among other things.",
+        "doc": "filters.html#atom"
+    },
+    {
+        "title": "craft twig attr filter",
+        "prefix": "attr",
+        "body": "{{ myString|attr }}",
+        "description": "Modifies an HTML tag’s attributes, using the same attribute definitions supported by using <a href=\"https://www.yiiframework.com/doc/api/2.0/yii-helpers-basehtml#renderTagAttributes()-detail\">yii\\helpers\\BaseHtml::renderTagAttributes()</a>.",
+        "doc": "filters.html#attr"
+    },
+    {
+        "title": "craft twig boolean filter",
+        "prefix": "boolean",
+        "body": "{{ ${1:myValue}|boolean }}",
+        "description": "Coerces the passed value to a boolean using PHP’s <a href=\"https://www.php.net/manual/en/function.boolval.php\">boolval()</a> function. Useful when dealing with stronger typing in PHP 8 and Twig 3.x.",
+        "doc": "filters.html#boolean"
+    },
+    {
+        "title": "craft twig camel filter",
+        "prefix": "camel",
+        "body": "{{ myString|camel }}",
+        "description": "Returns a string formatted in <code>“camelCase”</code>.",
+        "doc": "filters.html#camel"
+    },
+    {
+        "title": "craft twig contains filter",
+        "prefix": "contains",
+        "body": "{{ arr|contains(${'needle'}) }}",
+        "description": "Returns whether the passed-in array contains any nested arrays/objects with a particular key/attribute set to a given value.",
+        "doc": "filters.html#contains"
+    },
+    {
+        "title": "craft twig currency filter",
+        "prefix": "currency",
+        "body": "{{ ${1:myValue}|currency('${1:USD}', ${2:stripZeros=${3|true,false|}}) }}",
+        "description": "Formats a number as a currency.",
+        "doc": "filters.html#currency"
+    },
+    {
+        "title": "craft twig diff filter",
+        "prefix": "diff",
+        "body": "{{ arr1|diff('${1:arr2}') }}",
+        "description": [
+            "Returns the difference between arrays, using <a href=\"https://www.php.net/manual/en/function.array-diff.php\">array_diff()</a>",
+            "\n",
+            "It will return a new array with any values that were in the initial array, which weren’t present in any of the arrays passed into the filter."
+        ],
+        "doc": "filters.html#diff"
+    },
+    {
+        "title": "craft twig duration filter",
+        "prefix": "duration",
+        "body": "{{ ${1:myValue}|duration }}",
+        "description": "Runs a <a href=\"https://www.php.net/manual/en/class.dateinterval.php\">DateInterval</a> object or integer (number of seconds) through <a href=\"https://docs.craftcms.com/api/v4/craft-helpers-datetimehelper.html#method-humanduration\">craft\\helpers\\DateTimeHelper::humanDuration()</a> to output human-friendly duration text.",
+        "doc": "filters.html#duration"
+    },
+    {
+        "title": "craft twig encenc filter",
+        "prefix": "encenc",
+        "body": "{{ ${1:'secure-string'}|encenc }}",
+        "description": "Encrypts and base64-encodes a string.",
+        "doc": "filters.html#encenc"
+    },
+    {
+        "title": "craft twig explodeClass filter",
+        "prefix": "explodeClass",
+        "body": "{{ myString|explodeClass }}",
+        "description": [
+            "Converts a class attribute value into an array of class names.",
+            "\n",
+            "If an array is passed in, it will be returned as-is."
+        ],
+        "doc": "filters.html#explodeclass"
+    },
+    {
+        "title": "craft twig explodestyle filter",
+        "prefix": "explodestyle",
+        "body": "{{ myString|explodestyle }}",
+        "description": [
+            "Converts a <code>style</code> attribute value into an array of property name/value pairs.",
+            "\n",
+            "If an array is passed in, it will be returned as-is."
+        ],
+        "doc": "filters.html#explodestyle"
+    },
+    {
+        "title": "craft twig filesize filter",
+        "prefix": "filesize",
+        "body": "{{ ${1:myValue}|filesize }}",
+        "description": [
+            "Formats a number of bytes into something nicer.",
+            "\r",
+            "If the passed-in value isn’t a valid number it will be returned verbatim."
+        ],
+        "doc": "filters.html#filesize"
+    },
+    {
+        "title": "craft twig filter filter",
+        "prefix": "filter",
+        "body": "{{ arr|filter('${1:callback}') }}",
+        "description": [
+            "Filters elements of an array.  ",
+            "\r",
+            "If nothing is passed to it, any “empty” elements will be removed.",
+            "\r",
+            "When an arrow function is passed, this works identically to Twig’s core <a href=\"https://twig.symfony.com/doc/3.x/filters/filter.html\">filter</a>"
+        ],
+        "doc": "filters.html#filter"
+    },
+    {
+        "title": "craft twig float filter",
+        "prefix": "float",
+        "body": "{{ ${1:myValue}|float }}",
+        "description": "Coerces the passed value to a float using PHP’s <a href=\"https://www.php.net/manual/en/function.floatval.php\">floatval()</a> function. Useful when dealing with stronger typing in PHP 8 and Twig 3.x.",
+        "doc": "filters.html#float"
+    },
+    {
+        "title": "craft twig group filter",
+        "prefix": "group",
+        "body": "{{ arr|group('${1:by}') }}",
+        "description": "Groups items in an array by a the results of an arrow function.",
+        "doc": "filters.html#group"
+    },
+    {
+        "title": "craft twig hash filter",
+        "prefix": "hash",
+        "body": "{{ ${1:myValue}|hash }}",
+        "description": "Prefixes the given string with a keyed-hash message authentication code (HMAC), for securely passing data in forms that should not be tampered with.",
+        "doc": "filters.html#hash"
+    },
+    {
+        "title": "craft twig httpdate filter",
+        "prefix": "httpdate",
+        "body": "{{ ${1:myValue}|httpdate }}",
+        "description": "Converts a date to the HTTP format, used by RFC 7231(opens new window)-compliant HTTP headers like Expires.",
+        "doc": "filters.html#httpdate"
+    },
+    {
+        "title": "craft twig id filter",
+        "prefix": "id",
+        "body": "{{ ${1:myValue}|id }}",
+        "description": "Formats a string into something that will work well as an HTML input id, via <a href=\"https://docs.craftcms.com/api/v4/craft-web-view.html#method-formatinputid\">craft\\web\\View::formatInputId()</a>",
+        "doc": "filters.html#id"
+    },
+    {
+        "title": "craft twig index filter",
+        "prefix": "index",
+        "body": "{{ arr|index('${1:by}') }}",
+        "description": "Runs an array through <a href=\"https://www.yiiframework.com/doc/api/2.0/yii-helpers-basearrayhelper#index()-detail\">ArrayHelper::index()</a>.",
+        "doc": "filters.html#index"
+    },
+    {
+        "title": "craft twig indexof filter",
+        "prefix": "indexof",
+        "body": "{{ ${1:myValue}|indexof('${2:needle}') }}",
+        "description": "Returns the index of a passed-in value within an array, or the position of a passed-in string within another string. (Note that the returned position is 0-indexed.) If no position can be found, -1 is returned instead.",
+        "doc": "filters.html#indexof"
+    },
+    {
+        "title": "craft twig integer filter",
+        "prefix": "integer",
+        "body": "{{ ${1:myValue}|integer }}",
+        "description": "Coerces the passed value to a integer using PHP’s <a href=\"https://www.php.net/manual/en/function.intval.php\">intval()</a> function. Useful when dealing with stronger typing in PHP 8 and Twig 3.x.",
+        "doc": "filters.html#integer"
+    },
+    {
+        "title": "craft twig intersect filter",
+        "prefix": "intersect",
+        "body": "{{ ${1:arr}|intersect('${2:arr2}') }}",
+        "description": "Returns an array containing only the values that are also in a passed-in array.",
+        "doc": "filters.html#intersect"
+    },
+    {
+        "title": "craft twig json_decode filter",
+        "prefix": "json_decode",
+        "body": "{{ ${1:myValue}|json_decode }}",
+        "description": "JSON-decodes a string into an array by passing it through <a href=\"https://www.yiiframework.com/doc/api/2.0/yii-helpers-json#decode()-detail\">yii\\helpers\\Json::decode()</a>",
+        "doc": "filters.html#json_decode"
+    },
+    {
+        "title": "craft twig kebab filter",
+        "prefix": "kebab",
+        "body": "{{ ${1:myValue}|kebab }}",
+        "description": "Returns a string formatted in “kebab-case”.",
+        "doc": "filters.html#kebab"
+    },
+    {
+        "title": "craft twig lcfirst filter",
+        "prefix": "lcfirst",
+        "body": "{{ ${1:myValue}|lcfirst }}",
+        "description": "Lowercases the first character of a string.",
+        "doc": "filters.html#lcfirst"
+    },
+    {
+        "title": "craft twig literal filter",
+        "prefix": "literal",
+        "body": "{{ ${1:myValue}|literal }}",
+        "description": "Runs a string through <a href=\"https://docs.craftcms.com/api/v4/craft-helpers-db.html#method-escapeparam\">craft\\helpers\\Db::escapeParam()</a> to escape commas and asterisks so they’re are not treated as special characters in query params.",
+        "doc": "filters.html#literal"
+    },
+    {
+        "title": "craft twig markdown filter",
+        "prefix": "markdown",
+        "body": "{{ ${1:myValue}|markdown }}",
+        "description": "Processes a string with Markdown",
+        "doc": "filters.html#markdown"
+    },
+    {
+        "title": "craft twig merge filter",
+        "prefix": "merge",
+        "body": "{{ ${1:arr}|merge('${2:arr2}') }}",
+        "description": "Merges an array with another one.",
+        "doc": "filters.html#merge"
+    },
+    {
+        "title": "craft twig money filter",
+        "prefix": "money",
+        "body": "{{ ${1:myValue}|money }}",
+        "description": "Outputs a value from a Money object.",
+        "doc": "filters.html#money"
+    },
+    {
+        "title": "craft twig multisort filter",
+        "prefix": "multisort",
+        "body": "{{ ${1:arr}|multisort('${2:by}') }}",
+        "description": [
+            "Sorts an array by one or more properties or keys within an array’s values.",
+            "To sort by a single property or key, pass its name as a string:"
+        ],
+        "doc": "filters.html#multisort"
+    },
+    {
+        "title": "craft twig namespace filter",
+        "prefix": "namespace",
+        "body": "{{ ${1:myValue}|namespace(${'params'}) }}",
+        "description": "The <code>|namespace </code> filter can be used to namespace input names and other HTML attributes, as well as CSS selectors.",
+        "doc": "filters.html#namespace"
+    },
+    {
+        "title": "craft twig namespaceAttributes filter",
+        "prefix": "namespaceAttributes",
+        "body": "{{ ${1:myValue}|namespaceAttributes }}",
+        "description": [
+            "The |namespaceAttributes filter can be used to namespace id and other HTML attributes, as well as CSS selectors.",
+            "It’s identical to the namespace filter, except that inputs’ name attributes won’t be modified."
+        ],
+        "doc": "filters.html#namespaceAttributes"
+    },
+    {
+        "title": "craft twig namespaceInputId filter",
+        "prefix": "namespaceInputId",
+        "body": "{{ ${1:myValue}|namespaceInputId() }}",
+        "description": "Namepaces an element ID.",
+        "doc": "filters.html#namespaceInputId"
+    },
+    {
+        "title": "craft twig namespaceInputName filter",
+        "prefix": "namespaceInputName",
+        "body": "{{ ${1:myValue}|namespaceInputName }}",
+        "description": "Namepaces an input name.",
+        "doc": "filters.html#namespaceinputname"
+    },
+    {
+        "title": "craft twig number filter",
+        "prefix": "number",
+        "body": "{{ ${1:myValue}|number }}",
+        "description": "Formats a number according to the user’s preferred language.",
+        "doc": "filters.html#number"
+    },
+    {
+        "title": "craft twig parseAttr filter",
+        "prefix": "parseAttr",
+        "body": "{{ ${1:myValue}|parseAttr }}",
+        "description": "Parses an HTML tag to find its attributes.",
+        "doc": "filters.html#parseattr"
+    },
+    {
+        "title": "craft twig parseRefs filter",
+        "prefix": "parseRefs",
+        "body": "{{ ${1:myValue}|parseRefs }}",
+        "description": "Parses a string for references to other elements, and returns an array of the element IDs.",
+        "doc": "filters.html#parserefs"
+    },
+    {
+        "title": "craft twig pascal filter",
+        "prefix": "pascal",
+        "body": "{{ ${1:myValue}|pascal }}",
+        "description": "Returns a string formatted in “PascalCase”.",
+        "doc": "filters.html#pascal"
+    },
+    {
+        "title": "craft twig percentage filter",
+        "prefix": "percentage",
+        "body": "{{ ${1:myValue}|percentage }}",
+        "description": "Formats a number as a percentage according to the user’s preferred language.",
+        "doc": "filters.html#percentage"
+    },
+    {
+        "title": "craft twig prepend filter",
+        "prefix": "prepend",
+        "body": "{{ ${1:myValue}|prepend('${2:prepend}') }}",
+        "description": "Prepends a HTML to beginning of another HTML ELement.",
+        "doc": "filters.html#prepend"
+    },
+    {
+        "title": "craft twig purify filter",
+        "prefix": "purify",
+        "body": "{{ ${1:myValue}|purify }}",
+        "description": "Runs the given text through HTML Purifier.",
+        "doc": "filters.html#purify"
+    },
+    {
+        "title": "craft twig push filter",
+        "prefix": "push",
+        "body": "{{ ${1:myValue}|push('${2:arr}') }}",
+        "description": "Pushes a value onto the end of an array.",
+        "doc": "filters.html#push"
+    },
+    {
+        "title": "craft twig removeClass filter",
+        "prefix": "removeClass",
+        "body": "{{ ${1:myValue}|removeClass('${2:class}') }}",
+        "description": "Removes a class from an HTML element.",
+        "doc": "filters.html#removeclass"
+    },
+    {
+        "title": "craft twig replace filter",
+        "prefix": "replace",
+        "body": "{{ ${1:myValue}|replace('${2:search}', '${3:replace}') }}",
+        "description": "Replaces parts of a string with other things.",
+        "doc": "filters.html#replace"
+    },
+    {
+        "title": "craft twig rss filter",
+        "prefix": "rss",
+        "body": "{{ ${1:myValue}|rss }}",
+        "description": "Outputs a date in the format required for RSS feeds <code>(D, d M Y H:i:s O)</code>.        ",
+        "doc": "filters.html#rss"
+    },
+    {
+        "title": "craft twig snake filter",
+        "prefix": "snake",
+        "body": "{{ ${1:myValue}|snake }}",
+        "description": "Returns a string formatted in “snake_case”.",
+        "doc": "filters.html#snake"
+    },
+    {
+        "title": "craft twig string filter",
+        "prefix": "string",
+        "body": "{{ ${1:myValue}|string }}",
+        "description": "Converts a value to a string.",
+        "doc": "filters.html#string"
+    },
+    {
+        "title": "craft twig time filter",
+        "prefix": "time",
+        "body": "{{ ${1:myValue}|time(${2|'short','medium','long'|}) }}",
+        "description": "Outputs the time of day for a timestamp or DateTime(opens new window) object.",
+        "doc": "filters.html#time"
+    },
+    {
+        "title": "craft twig timestamp filter",
+        "prefix": "timestamp",
+        "body": "{{ ${1:myValue}|timestamp }}",
+        "description": "Formats a date as a human-readable timestamp",
+        "doc": "filters.html#timestamp"
+    },
+    {
+        "title": "craft twig translate filter",
+        "prefix": "translate",
+        "body": "{{ ${1:myValue}|translate }}",
+        "description": "Translates a string into the user’s preferred language.",
+        "doc": "filters.html#translate-or-t"
+    },
+    {
+        "title": "craft twig t filter",
+        "prefix": "t",
+        "body": "{{ ${1:myValue}|t }}",
+        "description": "Translates a string into the user’s preferred language.",
+        "doc": "filters.html#translate-or-t"
+    },
+    {
+        "title": "craft twig truncate filter",
+        "prefix": "truncate",
+        "body": "{{ ${1:myValue}|truncate(${2|'chars','words'|}, ${3:100}) }}",
+        "description": "Truncates a string to a certain number of characters or words.",
+        "doc": "filters.html#truncate"
+    },
+    {
+        "title": "craft twig ucfirst filter",
+        "prefix": "ucfirst",
+        "body": "{{ ${1:myValue}|ucfirst }}",
+        "description": "Converts the first character of a string to uppercase.",
+        "doc": "filters.html#ucfirst"
+    },
+    {
+        "title": "craft twig unique filter",
+        "prefix": "unique",
+        "body": "{{ ${1:myValue}|unique }}",
+        "description": "Removes duplicate values from an array.",
+        "doc": "filters.html#unique"
+    },
+    {
+        "title": "craft twig unshift filter",
+        "prefix": "unshift",
+        "body": "{{ ${1:myValue}|unshift('${2:arr}') }}",
+        "description": "Prepends one or more items to the beginning of an array, and returns the new array.",
+        "doc": "filters.html#unshift"
+    },
+    {
+        "title": "craft twig ucwords filter",
+        "prefix": "ucwords",
+        "body": "{{ ${1:myValue}|ucwords }}",
+        "description": "Converts the first character of each word in a string to uppercase.",
+        "doc": "filters.html#ucwords"
+    },
+    {
+        "title": "craft twig values filter",
+        "prefix": "values",
+        "body": "{{ ${1:myValue}|values }}",
+        "description": "Returns an array of all the values in a given array, but without any custom keys.",
+        "doc": "filters.html#values"
+    },
+    {
+        "title": "craft twig where filter",
+        "prefix": "where",
+        "body": "{{ ${1:myValue}|where('${2:callback}') }}",
+        "description": "Runs an array through <a href=\"https://docs.craftcms.com/api/v4/craft-helpers-arrayhelper.html#method-where\">craft\\helpers\\ArrayHelper::where()</a>.",
+        "doc": "filters.html#where"
+    },
+    {
+        "title": "craft twig widont filter",
+        "prefix": "widont",
+        "body": "{{ ${1:myValue}|widont }}",
+        "description": [
+            "Inserts a non-breaking space between the last two words of a string.",
+            "This can be useful to prevent typographic widows and orphans"
+        ],
+        "doc": "filters.html#widont"
+    },
+    {
+        "title": "craft twig without filter",
+        "prefix": "without",
+        "body": "{{ ${1:myValue}|without('${2:arr}') }}",
+        "description": "Returns an array without the specified item(s).",
+        "doc": "filters.html#without"
+    },
+    {
+        "title": "craft twig withoutKey filter",
+        "prefix": "withoutKey",
+        "body": "{{ ${1:myValue}|withoutKey('${2:arr}') }}",
+        "description": "Returns an array without the specified key(s).",
+        "doc": "filters.html#withoutKey"
+    }
+]

@@ -56,6 +56,11 @@
             "type": "boolean",
             "default": false,
             "description": "Enable/disable contributes code snippets"
+          },
+          "twigCodeSnippets.enableCraft":{
+            "type" : "boolean",
+            "default": false,
+            "description": "Enable/disable Craft CMS twig code snippets"
           }
         }
       }

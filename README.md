@@ -1,6 +1,6 @@
 # Twig code snippets
 
-A collection of Twig code snippets 164 for now & some twig support stuff like hover information and syntaxes highlighting.
+A collection of Twig code snippets 333 for now & some twig support stuff like hover information and syntaxes highlighting.
 
 ## Installation
 
@@ -20,6 +20,7 @@ ext install nadim-vscode.twig-code-snippets
 | `twigCodeSnippets.enableTwig` | boolean | `true` | Enable/disable Twig core code snippets |
 | `twigCodeSnippets.enableSymfony` | boolean | `true` | Enable/disable twig symfony code snippets |
 | `twigCodeSnippets.enableContribute` | boolean | `false` | Enable/disable contributes code snippets |
+| `twigCodeSnippets.enableCraft` | boolean | `false` | Enable/disable Craft CMS twig code snippets |
 | `twigCodeSnippets.enableHover` | boolean | `true` | Enable/disable hover information |
 
 
