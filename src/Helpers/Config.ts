@@ -11,12 +11,16 @@ export class Config {
         return workspace.getConfiguration('twigCodeSnippets').get('enableSymfony');
     }
 
+    public static get enableHover(): boolean | undefined {
+        return workspace.getConfiguration('twigCodeSnippets').get('enableHover');
+    }
+
     public static get enableContribute(): boolean | undefined {
         return workspace.getConfiguration('twigCodeSnippets').get('enableContribute');
     }
 
-    public static get enableHover(): boolean | undefined {
-        return workspace.getConfiguration('twigCodeSnippets').get('enableHover');
+    public static get enableCraft(): boolean | undefined {
+        return workspace.getConfiguration('twigCodeSnippets').get('enableCraft');
     }
 
     public static get(property: string) {

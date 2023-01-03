@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import { Config } from './Helpers/Config';
 import { ContributeCompletionProvider } from './Provider/Completion/ContributeCompletionProvider';
+import { CraftCompletionProvider } from './Provider/Completion/CraftCompletionProvider';
 import { SymfonyCompletionProvider } from './Provider/Completion/SymfonyCompletionProvider';
 import { TwigCompletionProvider } from './Provider/Completion/TwigCompletionProvider';
 import { ExtensionHoverProvider } from './Provider/Hover/ExtensionHoverProvider';
@@ -28,6 +29,11 @@ export function enableSnippets(context: vscode.ExtensionContext) {
 	if (Config.enableContribute) {
 		let contributeProvider = vscode.languages.registerCompletionItemProvider('twig', new ContributeCompletionProvider());
 		context.subscriptions.push(contributeProvider);
+	}
+
+	if (Config.enableCraft) {
+		let craftProvider = vscode.languages.registerCompletionItemProvider('twig', new CraftCompletionProvider());
+		context.subscriptions.push(craftProvider);
 	}
 
 }

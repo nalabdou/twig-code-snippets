@@ -1,0 +1,93 @@
+[
+    {
+        "title": "craft twig array test",
+        "prefix": "array",
+        "body": "is array",
+        "description": "Returns whether an object is an array via PHP’s <a href=\"https://www.php.net/manual/en/function.is-array.php\">is_array()</a>",
+        "doc": "tests.html#array"
+    },
+    {
+        "title": "craft twig boolean test",
+        "prefix": "boolean",
+        "body": "is boolean",
+        "description": "Returns whether an object is a boolean via PHP’s <a href=\"https://www.php.net/manual/en/function.is-bool.php\">is_bool()</a>",
+        "doc": "tests.html#boolean"
+    },
+    {
+        "title": "craft twig callable test",
+        "prefix": "callable",
+        "body": "is callable",
+        "description": "Returns whether an object is callable via PHP’s <a href=\"https://www.php.net/manual/en/function.is-callable.php\">is_callable()</a>",
+        "doc": "tests.html#callable"
+    },
+    {
+        "title": "craft twig countable test",
+        "prefix": "countable",
+        "body": "is countable",
+        "description": "Returns whether an object is countable via PHP’s <a href=\"https://www.php.net/manual/en/function.is-countable.php\">is_countable()</a>",
+        "doc": "tests.html#countable"
+    },
+    {
+        "title": "craft twig float test",
+        "prefix": "float",
+        "body": "is float",
+        "description": "Returns whether an object is a float via PHP’s <a href=\"https://www.php.net/manual/en/function.is-float.php\">is_float()</a>",
+        "doc": "tests.html#float"
+    },
+    {
+        "title": "craft twig instance of test",
+        "prefix": "instanceof",
+        "body": "is instanceof",
+        "description": "Returns whether an object is an instance of another object or class.",
+        "doc": "tests.html#instanceof"
+    },
+    {
+        "title": "craft twig integer test",
+        "prefix": "integer",
+        "body": "is integer",
+        "description": "Returns whether an object is an integer via PHP’s <a href=\"https://www.php.net/manual/en/function.is-int.php\">is_int()</a>",
+        "doc": "tests.html#integer"
+    },
+    {
+        "title": "craft twig missing test",
+        "prefix": "missing",
+        "body": "is missing",
+        "description": "Returns whether an object is missing.",
+        "doc": "tests.html#missing"
+    },
+    {
+        "title": "craft twig numeric test",
+        "prefix": "numeric",
+        "body": "is numeric",
+        "description": "Returns whether an object is numeric via PHP’s <a href=\"https://www.php.net/manual/en/function.is-numeric.php\">is_numeric()</a>",
+        "doc": "tests.html#numeric"
+    },
+    {
+        "title": "craft twig object test",
+        "prefix": "object",
+        "body": "is object",
+        "description": "Returns whether an object is an object via PHP’s <a href=\"https://www.php.net/manual/en/function.is-object.php\">is_object()</a>",
+        "doc": "tests.html#object"
+    },
+    {
+        "title": "craft twig resource test",
+        "prefix": "resource",
+        "body": "is resource",
+        "description": "Returns whether an object is a resource via PHP’s <a href=\"https://www.php.net/manual/en/function.is-resource.php\">is_resource()</a>",
+        "doc": "tests.html#resource"
+    },
+    {
+        "title": "craft twig scalar test",
+        "prefix": "scalar",
+        "body": "is scalar",
+        "description": "Returns whether an object is a scalar via PHP’s <a href=\"https://www.php.net/manual/en/function.is-scalar.php\">is_scalar()</a>",
+        "doc": "tests.html#scalar"
+    },
+    {
+        "title": "craft twig string test",
+        "prefix": "string",
+        "body": "is string",
+        "description": "Returns whether an object is a string via PHP’s <a href=\"https://www.php.net/manual/en/function.is-string.php\">is_string()</a>",
+        "doc": "tests.html#string"
+    }
+]

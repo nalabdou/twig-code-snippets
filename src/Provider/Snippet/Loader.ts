@@ -1,8 +1,14 @@
+import { Config } from "../../Helpers/Config";
 import { Snippet } from "./Snippet";
 
 export class Loader {
 
     public static loadTwigSnippets(): Snippet[] {
+
+        if (!Config.enableTwig) {
+            return [];
+        }
+
         return [
             ...require('../../snippets/twig/filters.code-snippets.json'),
             ...require('../../snippets/twig/functions.code-snippets.json'),
@@ -13,6 +19,11 @@ export class Loader {
     }
 
     public static loadSymfonySnippets(): Snippet[] {
+
+        if (!Config.enableSymfony) {
+            return [];
+        }
+
         return [
             ...require('../../snippets/symfony/filters.code-snippets.json'),
             ...require('../../snippets/symfony/functions.code-snippets.json'),
@@ -23,8 +34,27 @@ export class Loader {
     }
 
     public static loadContributeSnippets(): Snippet[] {
+
+        if (!Config.enableContribute) {
+            return [];
+        }
+
         return [
             ...require('../../snippets/contributes/nalabdou.code-snippets.json'),
+        ];
+    }
+
+    public static loadCraftSnippets(): Snippet[] {
+
+        if (!Config.enableCraft) {
+            return [];
+        }
+
+        return [
+            ...require('../../snippets/craft/filters.code-snippets.json'),
+            ...require('../../snippets/craft/functions.code-snippets.json'),
+            ...require('../../snippets/craft/tags.code-snippets.json'),
+            ...require('../../snippets/craft/tests.code-snippets.json'),
         ];
     }
 
@@ -33,6 +63,7 @@ export class Loader {
             ...this.loadTwigSnippets(),
             ...this.loadSymfonySnippets(),
             ...this.loadContributeSnippets(),
+            ...this.loadCraftSnippets(),
         ];
     }
 
