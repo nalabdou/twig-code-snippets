@@ -1,0 +1,58 @@
+[
+    {
+        "title": "drupal trans filter",
+        "prefix": "trans",
+        "body": "${1:variable}|${2|t,trans|}${3:}",
+        "description": "This filter (alternatively, t) will run the variable through the Drupal t() function, which will return a translated string. This filter should be used for any interface strings manually placed in the template that will appear for users.",
+        "doc": "trans",
+        "example": "Hello, {{ 'world'|trans }}"
+    },
+    {
+        "title": "drupal placeholder filter",
+        "prefix": "placeholder",
+        "body": "${1:variable}|${2|placeholder|}${3:}",
+        "description": "This filter escapes content to HTML and formats it using drupal_placeholder(), which makes it display as emphasized text.",
+        "doc": "placeholder",
+        "example": "Hello, {{ 'world'|placeholder }}"
+    },
+    {
+        "title": "drupal clean_class filter",
+        "prefix": "clean_class",
+        "body": "${1:variable}|${2|clean_class|}${3:}",
+        "description": "This filter prepares a string for use as a valid HTML class name. See Html::getClass()",
+        "doc": "clean_class",
+        "example": "{{ 'var'|clean_class }}"
+    },
+    {
+        "title": "drupal clean_id filter",
+        "prefix": "clean_id",
+        "body": "${1:variable}|${2|clean_id|}${3:}",
+        "description": "This filter prepares a string for use as a valid HTML ID. See Html::getId()",
+        "doc": "clean_id",
+        "example": "{{ 'var'|clean_id }}"
+    },
+    {
+        "title": "drupal format_date filter",
+        "prefix": "format_date",
+        "body": "${1:variable}|${2|format_date|}${3:}",
+        "description": "This filter formats a date using the Drupal date format. See format_date()",
+        "doc": "format_date",
+        "example": "{{ 'dateString'|format_date }}"
+    },
+    {
+        "title": "drupal safe_join filter",
+        "prefix": "safe_join",
+        "body": "${1:variable}|${2|safe_join|}${3:}",
+        "description": "This filter joins a list of strings together with a separator. See safe_join()",
+        "doc": "safe_join",
+        "example": "{{ 'list'|safe_join(', ') }}"
+    },
+    {
+        "title": "drupal without filter",
+        "prefix": "without",
+        "body": "${1:variable}|${2|without|}${3:}",
+        "description": "This filter removes a key from an array. See without()",
+        "doc": "without",
+        "example": "{{ 'list'|without('key') }}"
+    }
+]

@@ -4,118 +4,135 @@
         "prefix": "_self",
         "body": "_self",
         "description": "The current template name.",
-        "doc": "global-variables.html#craft"
+        "doc": "global-variables.html#craft",
+        "example": "{{ _self }}"
     },
     {
         "title": "craft twig _context Global Variable",
         "prefix": "_context",
         "body": "_context",
         "description": "The currently-defined variables.",
-        "doc": "global-variables.html#craft"
+        "doc": "global-variables.html#craft",
+        "example": "{{ _context }}"
     },
     {
         "title": "craft twig _charset Global Variable",
         "prefix": "_charset",
         "body": "_charset",
         "description": "The current charset.",
-        "doc": "global-variables.html#craft"
+        "doc": "global-variables.html#craft",
+        "example": "{{ _charset }}"
     },
     {
         "title": "craft twig currentSite Global Variable",
         "prefix": "currentSite",
         "body": "{{ currentSite }}",
         "description": "The requested site, represented by a <a href=\"https://docs.craftcms.com/api/v4/craft-models-site.html\">craft\\models\\Site</a>",
-        "doc": "global-variables.html#currentsite"
+        "doc": "global-variables.html#currentsite",
+        "example": "{{ currentSite }}"
     },
     {
         "title": "craft twig currentUser Global Variable",
         "prefix": "currentUser",
         "body": "{{ currentUser }}",
         "description": "The currently logged-in user, represented by a <a href=\"https://docs.craftcms.com/api/v4/craft-elements-user.html\">craft\\elements\\User</a>",
-        "doc": "global-variables.html#currentuser"
+        "doc": "global-variables.html#currentuser",
+        "example": "{{ currentUser }}"
     },
     {
         "title": "craft twig devMode Global Variable",
         "prefix": "devMode",
         "body": "{{ devMode }}",
         "description": "Whether Craft is in Dev Mode.",
-        "doc": "global-variables.html#devmode"
+        "doc": "global-variables.html#devmode",
+        "example": "{{ devMode }}"
     },
     {
         "title": "craft twig loginUrl Global Variable",
         "prefix": "loginUrl",
         "body": "{{ loginUrl }}",
         "description": "The URL to the login page.",
-        "doc": "global-variables.html#loginurl"
+        "doc": "global-variables.html#loginurl",
+        "example": "{{ loginUrl }}"
     },
     {
         "title": "craft twig logoutUrl Global Variable",
         "prefix": "logoutUrl",
         "body": "{{ logoutUrl }}",
         "description": "The URL to the logout action.",
-        "doc": "global-variables.html#logouturl"
+        "doc": "global-variables.html#logouturl",
+        "example": "{{ logoutUrl }}"
     },
     {
         "title": "craft twig now Global Variable",
         "prefix": "now",
         "body": "{{ now }}",
         "description": "The current date and time, represented by a <a href=\"https://www.php.net/manual/en/class.datetime.php\">php\\DateTime</a>",
-        "doc": "global-variables.html#now"
+        "doc": "global-variables.html#now",
+        "example": "{{ now }}"
     },
     {
         "title": "craft twig setPasswordUrl Global Variable",
         "prefix": "setPasswordUrl",
         "body": "{{ setPasswordUrl }}",
         "description": "The URL to the set password page.",
-        "doc": "global-variables.html#setpasswordurl"
+        "doc": "global-variables.html#setpasswordurl",
+        "example": "{{ setPasswordUrl }}"
     },
     {
         "title": "craft twig siteName Global Variable",
         "prefix": "siteName",
         "body": "{{ siteName }}",
         "description": "The name of the requested site.",
-        "doc": "global-variables.html#sitename"
+        "doc": "global-variables.html#sitename",
+        "example": "{{ siteName }}"
     },
     {
         "title": "craft twig siteUrl Global Variable",
         "prefix": "siteUrl",
         "body": "{{ siteUrl }}",
         "description": "The base URL of the requested site.",
-        "doc": "global-variables.html#siteurl"
+        "doc": "global-variables.html#siteurl",
+        "example": "{{ siteUrl }}"
     },
     {
         "title": "craft twig systemName Global Variable",
         "prefix": "systemName",
         "body": "{{ systemName }}",
         "description": "The name of the Craft install.",
-        "doc": "global-variables.html#systemname"
+        "doc": "global-variables.html#systemname",
+        "example": "{{ systemName }}"
     },
     {
         "title": "craft twig today Global Variable",
         "prefix": "today",
         "body": "{{ today }}",
         "description": "The current date, represented by a <a href=\"https://www.php.net/manual/en/class.datetime.php\">php\\DateTime</a>",
-        "doc": "global-variables.html#today"
+        "doc": "global-variables.html#today",
+        "example": "{{ today }}"
     },
     {
         "title": "craft twig tomorrow Global Variable",
         "prefix": "tomorrow",
         "body": "{{ tomorrow }}",
         "description": "The date of tomorrow, represented by a <a href=\"https://www.php.net/manual/en/class.datetime.php\">php\\DateTime</a>",
-        "doc": "global-variables.html#tomorrow"
+        "doc": "global-variables.html#tomorrow",
+        "example": "{{ tomorrow }}"
     },
     {
         "title": "craft twig view Global Variable",
         "prefix": "view",
         "body": "{{ view }}",
         "description": "The <a href=\"https://docs.craftcms.com/api/v4/craft-web-view.html\">craft\\web\\View</a> component.",
-        "doc": "global-variables.html#view"
+        "doc": "global-variables.html#view",
+        "example": "{{ view }}"
     },
     {
         "title": "craft twig yesterday Global Variable",
         "prefix": "yesterday",
         "body": "{{ yesterday }}",
         "description": "The date of yesterday, represented by a <a href=\"https://www.php.net/manual/en/class.datetime.php\">php\\DateTime</a>",
-        "doc": "global-variables.html#yesterday"
+        "doc": "global-variables.html#yesterday",
+        "example": "{{ yesterday }}"
     }
 ]

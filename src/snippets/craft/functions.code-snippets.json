@@ -7,112 +7,128 @@
             "A shortcut for outputting a hidden input used to route a POST request to a particular controller action.",
             "This is effectively the same as writing \r <code>&lt;input type=&quot;hidden&quot; name=&quot;action&quot; value=&quot;controller/action/route&quot;&gt;</code> \r directly into a template."
         ],
-        "doc": "functions.html#actioninput"
+        "doc": "functions.html#actioninput",
+        "example": "{{ actionInput('entries/save-entry') }}"
     },
     {
         "title": "craft twig actionUrl function",
         "prefix": "actionUrl",
         "body": "{{ actionUrl($0) }}",
         "description": "Returns a controller action URL, automatically accounting for relative vs. absolute format and the active actionTrigger setting.",
-        "doc": "functions.html#actionUrl"
+        "doc": "functions.html#actionUrl",
+        "example": "{{ actionUrl('') }}"
     },
     {
         "title": "craft twig alias function",
         "prefix": "alias",
         "body": "{{ alias('${1:@alias}') }}",
         "description": "Passes a string through <a href=\"https://www.yiiframework.com/doc/api/2.0/yii-baseyii#getAlias()-detail\">Craft::getAlias()</a>, which will check if the string begins with an <a href=\"https://www.yiiframework.com/doc/guide/2.0/en/concept-aliases\">alias</a>. (See <a href=\"https://craftcms.com/docs/4.x/config/#aliases\">Configuration</a> for more info.)",
-        "doc": "functions.html#alias"
+        "doc": "functions.html#alias",
+        "example": "{{ alias('@web') }}"
     },
     {
         "title": "craft twig attr function",
         "prefix": "attr",
         "body": "{{ attr(${1:attrs}) }}",
         "description": "Generates a list of HTML attributes based on the given <a href=\"https://craftcms.com/docs/4.x/dev/twig-primer.html#hashes\">hash</a>, using <a href=\"https://www.yiiframework.com/doc/api/2.0/yii-helpers-basehtml#renderTagAttributes()-detail\">yii\\helpers\\BaseHtml::renderTagAttributes()</a>.",
-        "doc": "functions.html#attr"
+        "doc": "functions.html#attr",
+        "example": "{{ attr({class: 'my-class', 'data-foo': 'bar'}) }}"
     },
     {
         "title": "craft twig beginBody function",
         "prefix": "beginBody",
         "body": "{{ beginBody() }}",
         "description": "Outputs any scripts and styles that were registered for the “begin body” position. It should be placed right after your <code>&lt;body&gt;</code> tag.",
-        "doc": "functions.html#beginBody"
+        "doc": "functions.html#beginBody",
+        "example": "{{ beginBody() }}"
     },
     {
         "title": "craft twig canCreateDrafts function",
         "prefix": "canCreateDrafts",
         "body": "{{ canCreateDrafts(${1:element}) }}",
         "description": "Checks whether the current user (or a specific user, when provided) can create drafts from the passed element.",
-        "doc": "functions.html#canCreateDrafts"
+        "doc": "functions.html#canCreateDrafts",
+        "example": "{{ canCreateDrafts(entry) }}"
     },
     {
         "title": "craft twig canDelete function",
         "prefix": "canDelete",
         "body": "{{ canDelete(${1:element}) }}",
         "description": "Checks whether the current user (or a specific user, when provided) can delete the passed element.",
-        "doc": "functions.html#canDelete"
+        "doc": "functions.html#canDelete",
+        "example": "{{ canDelete(entry) }}"
     },
     {
         "title": "craft twig canDeleteForSite function",
         "prefix": "canDeleteForSite",
         "body": "{{ canDeleteForSite(${1:element}) }}",
         "description": "Checks whether the current user (or a specific user, when provided) can delete the passed element from the site it was loaded in.",
-        "doc": "functions.html#canDeleteForSite"
+        "doc": "functions.html#canDeleteForSite",
+        "example": "{{ canDeleteForSite(entry) }}"
     },
     {
         "title": "craft twig canDuplicate function",
         "prefix": "canDuplicate",
         "body": "{{ canDuplicate(${1:element}) }}",
         "description": "Checks whether the current user (or a specific user, when provided) can duplicate the passed element.",
-        "doc": "functions.html#canDuplicate"
+        "doc": "functions.html#canDuplicate",
+        "example": "{{ canDuplicate(entry) }}"
     },
     {
         "title": "craft twig canSave function",
         "prefix": "canSave",
         "body": "{{ canSave(${1:element}) }}",
         "description": "Checks whether the current user (or a specific user, when provided) can save the passed element.",
-        "doc": "functions.html#canSave"
+        "doc": "functions.html#canSave",
+        "example": "{{ canSave(entry) }}"
     },
     {
         "title": "craft twig canView function",
         "prefix": "canView",
         "body": "{{ canView(${1:element}) }}",
         "description": "Checks whether the current user (or a specific user, when provided) can view the passed element within the control panel.",
-        "doc": "functions.html#canView"
+        "doc": "functions.html#canView",
+        "example": "{{ canView(entry) }}"
     },
     {
         "title": "craft twig ceil function",
         "prefix": "ceil",
         "body": "{{ ceil(${1:number}) }}",
         "description": "Rounds a number up.",
-        "doc": "functions.html#ceil"
+        "doc": "functions.html#ceil",
+        "example": "{{ ceil(3.14) }}"
     },
     {
         "title": "craft twig className function",
         "prefix": "className",
         "body": "{{ className(${1:object}) }}",
         "description": "Returns the fully qualified class name of a given object.",
-        "doc": "functions.html#className"
+        "doc": "functions.html#className",
+        "example": "{{ className(entry) }}"
     },
     {
         "title": "craft twig clone function",
         "prefix": "clone",
         "body": "{{ clone(${1:object}) }}",
         "description": "Clones a given object.",
-        "doc": "functions.html#clone"
+        "doc": "functions.html#clone",
+        "example": "{{ clone(entry) }}"
     },
     {
         "title": "craft twig collect function",
         "prefix": "collect",
         "body": "{{ collect(${1:array}) }}",
         "description": "Creates a new <a href=\"https://laravel.com/docs/9.x/collections\">collection</a> from the given array.",
-        "doc": "functions.html#collect"
+        "doc": "functions.html#collect",
+        "example": "{{ collect([1, 2, 3]) }}"
     },
     {
         "title": "craft twig combine function",
         "prefix": "combine",
         "body": "{{ combine(${1:array1}, ${2:array2}) }}",
         "description": "Combines two arrays into a single array, where the first array’s values are the keys, and the second array’s values are the values.",
-        "doc": "functions.html#combine"
+        "doc": "functions.html#combine",
+        "example": "{{ combine(['a', 'b', 'c'], [1, 2, 3]) }}"
     },
     {
         "title": "craft twig configure function",
@@ -122,14 +138,16 @@
             "Passes through the behavior of the Craft::configure() method inherited from Yii::configure()",
             "It’s similar to create in that it applies attributes to an object, but instead of creating new instances it accepts an existing object and modifies it."
         ],
-        "doc": "functions.html#configure"
+        "doc": "functions.html#configure",
+        "example": "{{ configure(entry, {title: 'New Title'}) }}"
     },
     {
         "title": "craft twig cpUrl function",
         "prefix": "cpUrl",
         "body": "{{ cpUrl(${1:path}, ${2:params}) }}",
         "description": "Returns a control panel URL, automatically accounting for relative vs. absolute format and the active <a href=\"https://craftcms.com/docs/4.x/config/general.html#cptrigger\">cpTrigger</a> setting.",
-        "doc": "functions.html#cpUrl"
+        "doc": "functions.html#cpUrl",
+        "example": "{{ cpUrl('settings/plugins') }}"
     },
     {
         "title": "craft twig create function",
@@ -139,182 +157,208 @@
             "Passes through the behavior of the Craft::createObject() method inherited from Yii::createObject()",
             "It’s similar to configure in that it applies attributes to an object, but instead of modifying an existing object it creates a new instance."
         ],
-        "doc": "functions.html#create"
+        "doc": "functions.html#create",
+        "example": "{{ create('craft\\elements\\Entry', {title: 'New Title'}) }}"
     },
     {
         "title": "craft twig csrfInput function",
         "prefix": "csrfInput",
         "body": "{{ csrfInput() }}",
         "description": "Returns a hidden CSRF Token input. All sites that have CSRF Protection enabled must include this in each form that submits via POST.",
-        "doc": "functions.html#csrfInput"
+        "doc": "functions.html#csrfInput",
+        "example": "{{ csrfInput() }}"
     },
     {
         "title": "craft twig dataUrl function",
         "prefix": "dataUrl",
         "body": "{{ dataUrl(${1:file}, ${2:mimeType}) }}",
         "description": "Outputs an asset or file as a base64-encoded data URL. You can pass it an craft\\elements\\Asset object or a file path (optionally using an alias).",
-        "doc": "functions.html#dataUrl"
+        "doc": "functions.html#dataUrl",
+        "example": "{{ dataUrl('path/to/file.jpg') }}"
     },
     {
         "title": "craft twig endBody function",
         "prefix": "endBody",
         "body": "{{ endBody() }}",
         "description": "Outputs any JavaScript code that was registered to run at the end of the body.",
-        "doc": "functions.html#endBody"
+        "doc": "functions.html#endBody",
+        "example": "{{ endBody() }}"
     },
     {
         "title": "craft twig expression function",
         "prefix": "expression",
         "body": "{{ expression(${1:expression}) }}",
         "description": "Creates and returns a new <a href=\"https://www.yiiframework.com/doc/api/2.0/yii-db-expression\">yii\\db\\Expression</a> object, for use in database queries.",
-        "doc": "functions.html#expression"
+        "doc": "functions.html#expression",
+        "example": "{{ expression('NOW()') }}"
     },
     {
         "title": "craft twig failMessageInput function",
         "prefix": "failMessageInput",
         "body": "{{ failMessageInput(${1:element}) }}",
         "description": "Shortcut for typing &lt;input type=&quot;hidden&quot; name=&quot;failMessage&quot; value=&quot;{{ 'Custom fail message'|hash }}&quot;&gt;",
-        "doc": "functions.html#failMessageInput"
+        "doc": "functions.html#failMessageInput",
+        "example": "{{ failMessageInput(entry) }}"
     },
     {
         "title": "craft twig floor function",
         "prefix": "floor",
         "body": "{{ floor(${1:number}) }}",
         "description": "Rounds a number down.",
-        "doc": "functions.html#floor"
+        "doc": "functions.html#floor",
+        "example": "{{ floor(3.14) }}"
     },
     {
         "title": "craft twig getenv function",
         "prefix": "getenv",
         "body": "{{ getenv(${1:name}) }}",
         "description": "Returns the value of an environment variable.",
-        "doc": "functions.html#getenv"
+        "doc": "functions.html#getenv",
+        "example": "{{ getenv('DB_HOST') }}"
     },
     {
         "title": "craft twig gql function",
         "prefix": "gql",
         "body": "{{ gql(${1:query}, ${2:variables}) }}",
         "description": "Executes a GraphQL query against the full schema.",
-        "doc": "functions.html#gql"
+        "doc": "functions.html#gql",
+        "example": "{{ gql('{ entries { title } }') }}"
     },
     {
         "title": "craft twig head function",
         "prefix": "head",
         "body": "{{ head(${1:array}) }}",
         "description": "Outputs any scripts and styles that were registered for the “head” position. It should be placed right before your &lt;/head&gt; tag.",
-        "doc": "functions.html#head"
+        "doc": "functions.html#head",
+        "example": "{{ head() }}"
     },
     {
         "title": "craft twig hiddenInput function",
         "prefix": "hiddenInput",
         "body": "{{ hiddenInput(${1:element}, ${2:attribute}, ${3:options}) }}",
         "description": "Generates an hidden HTML input tag.",
-        "doc": "functions.html#hiddenInput"
+        "doc": "functions.html#hiddenInput",
+        "example": "{{ hiddenInput(entry, 'title') }}"
     },
     {
         "title": "craft twig input function",
         "prefix": "input",
         "body": "{{ input(${1:element}, ${2:attribute}, ${3:options}) }}",
         "description": "Generates an HTML input tag.",
-        "doc": "functions.html#input"
+        "doc": "functions.html#input",
+        "example": "{{ input(entry, 'title') }}"
     },
     {
         "title": "craft twig ol function",
         "prefix": "ol",
         "body": "{{ ol(${1:array}) }}",
         "description": "Outputs an array of items as an ordered list.",
-        "doc": "functions.html#ol"
+        "doc": "functions.html#ol",
+        "example": "{{ ol(['Item 1', 'Item 2']) }}"
     },
     {
         "title": "craft twig parseBooleanEnv function",
         "prefix": "parseBooleanEnv",
         "body": "{{ parseBooleanEnv(${1:env}) }}",
         "description": "Parses a boolean environment variable.",
-        "doc": "functions.html#parseBooleanEnv"
+        "doc": "functions.html#parseBooleanEnv",
+        "example": "{{ parseBooleanEnv('DEBUG') }}"
     },
     {
         "title": "craft twig parseEnv function",
         "prefix": "parseEnv",
         "body": "{{ parseEnv(${1:env}) }}",
         "description": "Parses an environment variable.",
-        "doc": "functions.html#parseEnv"
+        "doc": "functions.html#parseEnv",
+        "example": "{{ parseEnv('DB_PORT') }}"
     },
     {
         "title": "craft twig plugin function",
         "prefix": "plugin",
         "body": "{{ plugin(${1:handle}) }}",
         "description": "Returns a plugin instance by its handle, or <code>null</code> if no plugin is installed and enabled with that handle.",
-        "doc": "functions.html#plugin"
+        "doc": "functions.html#plugin",
+        "example": "{{ plugin('my-plugin') }}"
     },
     {
         "title": "craft twig raw function",
         "prefix": "raw",
         "body": "{{ raw(${1:content}) }}",
         "description": "Wraps the given string in a <code>Twig\\Markup</code> object to prevent it from getting HTML-encoded when output.",
-        "doc": "functions.html#raw"
+        "doc": "functions.html#raw",
+        "example": "{{ raw('<p>Some HTML</p>') }}"
     },
     {
         "title": "craft twig redirectInput function",
         "prefix": "redirectInput",
         "body": "{{ redirectInput(${1:element}) }}",
         "description": "Shortcut for typing &lt;input type=&quot;hidden&quot; name=&quot;redirect&quot; value=&quot;{{ url|hash }}&quot;&gt;.",
-        "doc": "functions.html#redirectInput"
+        "doc": "functions.html#redirectInput",
+        "example": "{{ redirectInput(entry) }}"
     },
     {
         "title": "craft twig renderobjecttemplate function",
         "prefix": "renderObjectTemplate",
         "body": "{{ renderObjectTemplate(${1:template}, ${2:object}) }}",
         "description": "Renders an object template, which is a micro Twig template used to generate a single value, such as a URI, for an <code>object</code> represented by an <code>object</code> variable.",
-        "doc": "functions.html#renderObjectTemplate"
+        "doc": "functions.html#renderObjectTemplate",
+        "example": "{{ renderObjectTemplate('entries/{slug}', entry) }}"
     },
     {
         "title": "craft twig seq function",
         "prefix": "seq",
         "body": "{{ seq(${1:param}) }}",
         "description": "Outputs the next or current number in a sequence, defined by name",
-        "doc": "functions.html#seq"
+        "doc": "functions.html#seq",
+        "example": "{{ seq('mySequence') }}"
     },
     {
         "title": "craft twig shuffle function",
         "prefix": "shuffle",
         "body": "{{ shuffle(${1:array}) }}",
         "description": "Randomizes the order of the elements within an array.",
-        "doc": "functions.html#shuffle"
+        "doc": "functions.html#shuffle",
+        "example": "{{ shuffle(['Item 1', 'Item 2']) }}"
     },
     {
         "title": "craft twig siteUrl function",
         "prefix": "siteUrl",
         "body": "{{ siteUrl(${1:path}, ${2:params}, ${3:scheme}, ${3:siteId}) }}",
         "description": "Similar to <a href=\"https://craftcms.com/docs/4.x/dev/functions.html#url-path-params-scheme-mustshowscriptname\">url()</a>, except only for creating URLs to pages on your site.        ",
-        "doc": "functions.html#siteurl"
+        "doc": "functions.html#siteurl",
+        "example": "{{ siteUrl('about') }}"
     },
     {
         "title": "craft twig successMessageInput function",
         "prefix": "successMessageInput",
         "body": "{{ successMessageInput(${1:element}) }}",
         "description": "Shortcut for typing &lt;input type=&quot;hidden&quot; name=&quot;successMessage&quot; value=&quot;{{ message }}&quot;&gt;.",
-        "doc": "functions.html#successMessageInput"
+        "doc": "functions.html#successMessageInput",
+        "example": "{{ successMessageInput(entry) }}"
     },
     {
         "title": "craft twig svg function",
         "prefix": "svg",
         "body": "{{ svg(${1:path}, ${2:options}) }}",
         "description": "Outputs an SVG document.",
-        "doc": "functions.html#svg"
+        "doc": "functions.html#svg",
+        "example": "{{ svg('icons/arrow.svg') }}"
     },
     {
         "title": "craft twig tag function",
         "prefix": "tag",
         "body": "{{ tag(${1:tag}) }}",
         "description": "Renders a complete HTML tag.",
-        "doc": "functions.html#tag"
+        "doc": "functions.html#tag",
+        "example": "{{ tag('div', 'Hello world!') }}"
     },
     {
         "title": "craft twig ul function",
         "prefix": "ul",
         "body": "{{ ul(${1:array}) }}",
         "description": "Outputs an array of items as an unordered list.",
-        "doc": "functions.html#ul"
+        "doc": "functions.html#ul",
+        "example": "{{ ul(['Item 1', 'Item 2']) }}"
     },
     {
         "title": "craft twig url function",
@@ -330,6 +374,7 @@
             "<li>If the page has a token URL parameter, that token will automatically get appended to generated URLs to maintain preview context navigating around the site.</li>.",
             "</ul>"
         ],
-        "doc": "functions.html#url"
+        "doc": "functions.html#url",
+        "example": "{{ url('about') }}"
     }
 ]

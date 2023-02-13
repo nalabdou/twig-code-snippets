@@ -3,6 +3,7 @@
         "title": "symfony set rendered",
         "prefix": "set rendered",
         "body": "{% do ${1:form}.${2:field}.setRendered %}",
-        "description": "setRendered form"
+        "description": "setRendered form",
+        "example": "{% do form.field.setRendered %}"
     }
 ]

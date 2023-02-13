@@ -9,4 +9,5 @@ export interface Snippet extends Searchable {
     description: string[] | string;
     doc: string;
     hover: string | undefined | null;
+    example: string | string[] | undefined | null;
 }

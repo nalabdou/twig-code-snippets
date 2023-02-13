@@ -1,0 +1,77 @@
+[
+    {
+        "title": "drupal attach_library function",
+        "prefix": "attach_library",
+        "body": "{{ attach_library('${1:classy/node}') }}",
+        "description": "Attaches an asset library to the template.",
+        "doc": "attach_library",
+        "example": "{{ attach_library('classy/node') }}"
+    },
+    {
+        "title": "drupal active_theme function",
+        "prefix": "active_theme",
+        "body": "{{ active_theme() }}",
+        "description": "Prints the machine name of the active theme.",
+        "doc": "active_theme",
+        "example": "{{ active_theme() }}"
+    },
+    {
+        "title": "drupal active_theme_path function",
+        "prefix": "active_theme_path",
+        "body": "{{ active_theme_path() }}",
+        "description": "Prints the path to the active theme.",
+        "doc": "active_theme_path",
+        "example": "{{ active_theme_path() }}"
+    },
+    {
+        "title": "drupal create_attribute function",
+        "prefix": "create_attribute",
+        "body": "{{ create_attribute(${1:attributes}) }}",
+        "description": "Create new Attribute objects using the create_attribute() function inside a Twig template. These objects can then be manipulated like other Attribute objects coming into the Twig template.",
+        "doc": "create_attribute",
+        "example": "{{ create_attribute({class: ['foo', 'bar']}) }}"
+    },
+    {
+        "title": "drupal render_var function",
+        "prefix": "render_var",
+        "body": "{{ render_var(${1:arg}) }}",
+        "description": "Convenience function around render().",
+        "doc": "render_var",
+        "example": "{{ render_var(arg) }}"
+    },
+    {
+        "title": "drupal file_url function",
+        "prefix": "file_url",
+        "body": "{{ file_url(${1:node.field_example_image.entity.uri.value}) }}",
+        "description": "This helper function accepts a URI to a file and creates a relative URL path to the file.",
+        "doc": "file_url",
+        "example": "{{ file_url(node.field_example_image.entity.uri.value) }}"
+    },
+    {
+        "title": "drupal link function",
+        "prefix": "link",
+        "body": "{{ link(${1:text}, ${2:uri}, ${3:attributes}) }}",
+        "description": [
+            "This helper function accepts as the first parameter the text and as the second parameter the URI. The optional third parameter is the attributes object that can be used to provide eg. additional CSS classes.",
+            "Note that this function handles the <nolink> and <button> options of Drupal menu item text and generates <span> or <button> element instead of <a> when they are used. It also adds a data-drupal-link-system-path attribute and an is-active CSS class (in case the link is active) automatically if the URI parameter is a \\Drupal\\Core\\Url object with its set_active_class option set to TRUE!"
+        ],
+        "doc": "link",
+        "example": "{{ link('My link', 'node/1') }}"
+    },
+    {
+        "title": "drupal path function",
+        "prefix": "path",
+        "body": "{{ path(${1:route_name}, ${2:route_parameters}, ${3:options}) }}",
+        "description": "Generates a [relative] URL path given a route name and parameters.",
+        "doc": "path",
+        "example": "{{ path('node.add', {node_type: 'article'}) }}"
+    },
+    {
+        "title": "drupal url function",
+        "prefix": "url",
+        "body": "{{ url(${1:route_name}, ${2:route_parameters}, ${3:options}) }}",
+        "description": "Generates a [absolute] URL given a route name and parameters.",
+        "doc": "url",
+        "example": "{{ url('node.add', {node_type: 'article'}) }}"
+    }
+]
