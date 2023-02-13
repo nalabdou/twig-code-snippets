@@ -4,7 +4,8 @@
         "prefix": "attribute",
         "body": "{{ attribute(${1:object}, ${2:method}, ${3:arguments}) }}",
         "description": "The attribute function allows you to call a method or an array item on an object.",
-        "doc": "attribute"
+        "doc": "attribute",
+        "example": "{{ attribute(object, method, arguments) }}"
     },
     {
         "title": "twig block function",
@@ -15,104 +16,119 @@
             "<br>",
             "Block names must consist of alphanumeric characters, and underscores. The first char can't be a digit and dashes are not permitted."
         ],
-        "doc": "block"
+        "doc": "block",
+        "example": "{{ block(name) }}"
     },
     {
         "title": "twig constant function",
         "prefix": "constant",
         "body": "{{ constant(${1:class_name}, ${2:constant_name}) }}",
         "description": "The constant function allows you to get the value of a class constant.",
-        "doc": "constant"
+        "doc": "constant",
+        "example": "{{ constant(class_name, constant_name) }}"
     },
     {
         "title": "twig country_timezones function",
         "prefix": "country_timezones",
         "body": "{{ country_timezones(${1:country_code}) }}",
         "description": "The country_timezones function allows you to get the timezones for a given country.",
-        "doc": "country_timezones"
+        "doc": "country_timezones",
+        "example": "{{ country_timezones(country_code) }}"
     },
     {
         "title": "twig cycle function",
         "prefix": "cycle",
         "body": "{{ cycle(${1:values}, ${2:index}) }}",
         "description": "The cycle function allows you to cycle over values.",
-        "doc": "cycle"
+        "doc": "cycle",
+        "example": "{{ cycle(values, index) }}"
     },
     {
         "title": "twig date function",
         "prefix": "date",
         "body": "{{ date(${1:date}, ${2:format}, ${3:timezone}) }}",
         "description": "The date function allows you to format a date.",
-        "doc": "date"
+        "doc": "date",
+        "example": "{{ date(date, format, timezone) }}"
     },
     {
         "title": "twig dump function",
         "prefix": "dump",
         "body": "{{ dump(${1:var}) }}",
         "description": "The dump function allows you to dump a variable.",
-        "doc": "dump"
+        "doc": "dump",
+        "example": "{{ dump(var) }}"
     },
     {
         "title": "twig html_classes function",
         "prefix": "html_classes",
         "body": "{{ html_classes(${1:class_names}, ${2:attributes}) }}",
         "description": "The html_classes function allows you to convert an array of HTML classes into a string.",
-        "doc": "html_classes"
+        "doc": "html_classes",
+        "example": "{{ html_classes(class_names, attributes) }}"
     },
     {
         "title": "twig include function",
         "prefix": "include",
         "body": "{{ include(${1:template_name}, ${2:with}, ${3:ignore_missing}) }}",
         "description": "The include function allows you to include a template.",
-        "doc": "include"
+        "doc": "include",
+        "example": "{{ include(template_name, with, ignore_missing) }}"
     },
     {
         "title": "twig max function",
         "prefix": "max",
         "body": "{{ max(${1:values}) }}",
         "description": "The max function allows you to get the maximum value in a sequence.",
-        "doc": "max"
+        "doc": "max",
+        "example": "{{ max(values) }}"
     },
     {
         "title": "twig min function",
         "prefix": "min",
         "body": "{{ min(${1:values}) }}",
         "description": "The min function allows you to get the minimum value in a sequence.",
-        "doc": "min"
+        "doc": "min",
+        "example": "{{ min(values) }}"
     },
     {
         "title": "twig parent function",
         "prefix": "parent",
         "body": "{{ parent() }}",
         "description": "The parent function allows you to call the parent block.",
-        "doc": "parent"
+        "doc": "parent",
+        "example": "{{ parent() }}"
     },
     {
         "title": "twig random function",
         "prefix": "random",
         "body": "{{ random(${1:values}) }}",
         "description": "The random function allows you to get a random value from a sequence.",
-        "doc": "random"
+        "doc": "random",
+        "example": "{{ random(values) }}"
     },
     {
         "title": "twig range function",
         "prefix": "range",
         "body": "{{ range(${1:start}, ${2:end}, ${3:step}) }}",
         "description": "The range function allows you to create a sequence of numbers.",
-        "doc": "range"
+        "doc": "range",
+        "example": "{{ range(start, end, step) }}"
     },
     {
         "title": "twig source function",
         "prefix": "source",
         "body": "{{ source(${1:template_name}, ${2:ignore_missing}) }}",
         "description": "The source function allows you to get the source code of a template.",
-        "doc": "source"
+        "doc": "source",
+        "example": "{{ source(template_name, ignore_missing) }}"
     },
     {
         "title": "twig template_from_string function",
         "prefix": "template_from_string",
         "body": "{{ template_from_string(${1:template}, ${2:name}) }}",
         "description": "The template_from_string function allows you to create a template from a string.",
-        "doc": "template_from_string"
+        "doc": "template_from_string",
+        "example": "{{ template_from_string(template, name) }}"
     }
 ]

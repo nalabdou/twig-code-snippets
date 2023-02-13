@@ -5,7 +5,8 @@
         "body": [
             "{{ encore_entry_link_tags('${1:app}') }}"
         ],
-        "description": "Renders the HTML link tags for the given entry name."
+        "description": "Renders the HTML link tags for the given entry name.",
+        "example": "{{ encore_entry_link_tags('app') }}"
     },
     {
         "title": "symfony twig encore_entry_script_tags",
@@ -13,7 +14,8 @@
         "body": [
             "{{ encore_entry_script_tags('${1:app}') }}"
         ],
-        "description": "Renders the HTML script tags for the given entry name."
+        "description": "Renders the HTML script tags for the given entry name.",
+        "example": "{{ encore_entry_script_tags('app') }}"
     },
     {
         "title": "symfony twig encore_entry_js_files",
@@ -21,7 +23,8 @@
         "body": [
             "{{ encore_entry_js_files('${1:app}') }}"
         ],
-        "description": "Renders the HTML script tags for the given entry name."
+        "description": "Renders the HTML script tags for the given entry name.",
+        "example": "{{ encore_entry_js_files('app') }}"
     },
     {
         "title": "symfony twig encore_entry_css_files",
@@ -29,7 +32,8 @@
         "body": [
             "{{ encore_entry_css_files('${1:app}') }}"
         ],
-        "description": "Renders the HTML link tags for the given entry name."
+        "description": "Renders the HTML link tags for the given entry name.",
+        "example": "{{ encore_entry_css_files('app') }}"
     },
     {
         "title": "symfony twig encore_entry_exists",
@@ -37,6 +41,7 @@
         "body": [
             "{{ encore_entry_exists('${1:app}') }}"
         ],
-        "description": "Returns true if the given entry exists."
+        "description": "Returns true if the given entry exists.",
+        "example": "{{ encore_entry_exists('app') }}"
     }
 ]

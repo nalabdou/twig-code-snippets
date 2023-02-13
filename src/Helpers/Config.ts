@@ -23,6 +23,10 @@ export class Config {
         return workspace.getConfiguration('twigCodeSnippets').get('enableCraft');
     }
 
+    public static get enableDrupal(): boolean | undefined {
+        return workspace.getConfiguration('twigCodeSnippets').get('enableDrupal');
+    }
+
     public static get(property: string) {
         return workspace.getConfiguration('twigCodeSnippets').get(property);
     }

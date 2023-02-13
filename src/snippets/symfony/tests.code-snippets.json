@@ -5,7 +5,8 @@
         "prefix": "is rootform",
         "body": "{% if ${1:form} is rootform %}\n\t${2}\n{% endif %}",
         "description": "Renders the rest of a form.",
-        "doc": "#tests"
+        "doc": "#tests",
+        "example": "{% if form is rootform %}\n\t{{ form_widget(form) }}\n{% endif %}"
     },
     {
         "title": "symfony twig form is selectedchoice test",
@@ -13,6 +14,7 @@
         "prefix": "is selectedchoice",
         "body": "{% if ${1:choice} is selectedchoice(${2:value}) %}\n\t${3}\n{% endif %}",
         "description": "Renders the rest of a form.",
-        "doc": "#tests"
+        "doc": "#tests",
+        "example": "{% if choice is selectedchoice(value) %}\n\t{{ form_widget(form) }}\n{% endif %}"
     }
 ]

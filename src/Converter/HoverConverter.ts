@@ -29,6 +29,15 @@ export class HoverConverter {
         } else {
             hoverContent.value = snippet.description.join('\n');
         }
+
+        if (snippet.example) {
+            if (typeof snippet.example === 'string') {
+                hoverContent.appendCodeblock(snippet.example, 'twig');
+            } else {
+                hoverContent.appendCodeblock(snippet.example.join('\n'), 'twig');
+            }
+        }
+
         return hoverContent;
     }
 

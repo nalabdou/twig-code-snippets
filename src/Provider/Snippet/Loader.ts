@@ -58,12 +58,27 @@ export class Loader {
         ];
     }
 
+    public static loadDrupalSnippets(): Snippet[] {
+
+        if (!Config.enableDrupal) {
+            return [];
+        }
+
+        return [
+            ...require('../../snippets/drupal/filters.code-snippets.json'),
+            ...require('../../snippets/drupal/functions.code-snippets.json'),
+            // ...require('../../snippets/craft/tags.code-snippets.json'),
+            // ...require('../../snippets/craft/tests.code-snippets.json'),
+        ];
+    }
+
     public static loadAllSnippets(): Snippet[] {
         return [
             ...this.loadTwigSnippets(),
             ...this.loadSymfonySnippets(),
             ...this.loadContributeSnippets(),
             ...this.loadCraftSnippets(),
+            ...this.loadDrupalSnippets(),
         ];
     }
 

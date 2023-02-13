@@ -6,7 +6,8 @@
             "{% form_theme form ${1:resources} %}"
         ],
         "description": "Sets the resources to override the form theme for the given form view instance. You can use _self as resources to set it to the current resource.",
-        "doc": "#form-theme"
+        "doc": "#form-theme",
+        "example": "{% form_theme form _self %}"
     },
     {
         "title": "symfony twig stopwatch tag",
@@ -17,7 +18,8 @@
             "{% endstopwatch %}"
         ],
         "description": "Measures the execution time of a block of Twig code.",
-        "doc": "#stopwatch"
+        "doc": "#stopwatch",
+        "example": "{% stopwatch 'my_event' %}\n\t{% for user in users %}\n\t\t{{ user.name }}\n\t{% endfor %}\n{% endstopwatch %}"
     },
     {
         "title": "symfony twig trans tag",
@@ -26,7 +28,8 @@
             "{% trans with {'${1:%name%}': '${2:Fabien}'} from '${3:app}' into '${4:fr}' %}Hello ${1:%name%}{% endtrans %}"
         ],
         "description": "Translates the given message.",
-        "doc": "#trans"
+        "doc": "#trans",
+        "example": "{% trans %} trans.app.key {% endtrans %}"
     },
     {
         "title": "symfony twig trans_default_domain tag",
@@ -35,6 +38,7 @@
             "{% trans_default_domain ${1:domain} %}"
         ],
         "description": "This will set the default domain in the current template.",
-        "doc": "#trans-default-domain"
+        "doc": "#trans-default-domain",
+        "example": "{% trans_default_domain 'messages' %}"
     }
 ]

@@ -3,110 +3,100 @@
         "title": "twig is constant test",
         "prefix": "is constant",
         "body": [
-            "{% if ${1:variable} is constant(${2:constant}, ${3:object}) %}",
-            "\t$4",
-            "{% endif %}"
+            "is constant"
         ],
         "description": "The is constant function allows you to check if a value is exactly the same as a class constant.",
-        "doc": "constant"
+        "doc": "constant",
+        "example": "is constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION', '2.3.0')"
     },
     {
         "title": "twig is defined test",
         "prefix": "is defined",
         "body": [
-            "{% if ${1:variable} is defined %}",
-            "\t$2",
-            "{% endif %}"
+            "is defined"
         ],
         "description": "The is defined test allows you to check if a variable is defined.",
-        "doc": "defined"
+        "doc": "defined",
+        "example": "{% if foo is defined %}\n\t{{ foo }}\n{% endif %}"
     },
     {
         "title": "twig is empty test",
         "prefix": "is empty",
         "body": [
-            "{% if ${1:variable} is empty %}",
-            "\t$2",
-            "{% endif %}"
+            "is empty"
         ],
         "description": "The is empty test allows you to check if a variable is empty.",
-        "doc": "empty"
+        "doc": "empty",
+        "example": "{% if foo is empty %}\n\t{{ foo }}\n{% endif %}"
     },
     {
         "title": "twig is even test",
         "prefix": "is even",
         "body": [
-            "{% if ${1:variable} is even %}",
-            "\t$2",
-            "{% endif %}"
+            "is even"
         ],
         "description": "The is even test allows you to check if a variable is even.",
-        "doc": "even"
+        "doc": "even",
+        "example": "{% if foo is even %}\n\t{{ foo }}\n{% endif %}"
     },
     {
         "title": "twig is iterable test",
         "prefix": "is iterable",
         "body": [
-            "{% if ${1:variable} is iterable %}",
-            "\t$2",
-            "{% endif %}"
+            "is iterable"
         ],
         "description": "The is iterable test allows you to check if a variable is iterable.",
-        "doc": "iterable"
+        "doc": "iterable",
+        "example": "{% if foo is iterable %}\n\t{{ foo }}\n{% endif %}"
     },
     {
         "title": "twig is null test",
         "prefix": "is null",
         "body": [
-            "{% if ${1:variable} is null %}",
-            "\t$2",
-            "{% endif %}"
+            "is null"
         ],
         "description": "The is null test allows you to check if a variable is null.",
-        "doc": "null"
+        "doc": "null",
+        "example": "{% if foo is null %}\n\t{{ foo }}\n{% endif %}"
     },
     {
         "title": "twig is divisible by test",
         "prefix": "is divisible by",
         "body": [
-            "{% if ${1:variable} is divisible by(${2:divisor}) %}",
-            "\t$3",
-            "{% endif %}"
+            "is divisible by(${2:divisor})"
         ],
         "description": "The is divisible by test allows you to check if a variable is divisible by a number.",
-        "doc": "divisibleby"
+        "doc": "divisibleby",
+        "example": "{% if loop.index is divisible by(3) %}\n\t{{ loop.index }}\n{% endif %}"
     },
     {
         "title": "twig is same as test",
         "prefix": "is same as",
         "body": [
-            "{% if ${1:variable} is same as(${2:compare}) %}",
-            "\t$3",
-            "{% endif %}"
+            "is same as(${2:compare})"
         ],
         "description": "The is same as test allows you to check if a variable is the same as another variable.",
-        "doc": "sameas"
+        "doc": "sameas",
+        "example": "{% if foo is same as(false) %}\n\t{{ foo }}\n{% endif %}"
     },
     {
         "title": "twig is not defined test",
         "prefix": "is not defined",
         "body": [
-            "{% if ${1:variable} is defined %}",
-            "\t$2",
-            "{% endif %}"
+            "is defined"
         ],
         "description": "The is not defined test allows you to check if a variable is not defined.",
-        "doc": "defined"
+        "doc": "defined",
+        "example": "{% if foo is not defined %}\n\t{{ foo }}\n{% endif %}"
     },
     {
         "title": "twig is not empty test",
         "prefix": "is not empty",
         "body": [
-            "{% if ${1:variable} is not empty %}",
-            "\t$2",
-            "{% endif %}"
+            "is not empty"
         ],
         "description": "The is not empty test allows you to check if a variable is not empty.",
-        "doc": "empty"
+        "doc": "empty",
+        "example": "{% if foo is not empty %}\n\t{{ foo }}\n{% endif %}"
     }
 ]
