@@ -4,87 +4,201 @@
         "prefix": "loop.index",
         "body": "loop.index",
         "description": "The loop.index variable allows you to get the current iteration of the loop.",
-        "doc": "for#the-loop-variable"
+        "doc": "for#the-loop-variable",
+        "example": "{{ loop.index }}"
     },
     {
         "title": "twig loop index0",
         "prefix": "loop.index0",
         "body": [
-            "loop.index0",
-            "loop.index",
             "loop.index0"
         ],
         "description": "The loop.index0 variable allows you to get the current iteration of the loop (starting at 0).",
-        "doc": "for#the-loop-variable"
+        "doc": "for#the-loop-variable",
+        "example": "{{ loop.index0 }}"
     },
     {
         "title": "twig loop revindex",
         "prefix": "loop.revindex",
         "body": "loop.revindex",
         "description": "The loop.revindex variable allows you to get the number of iterations from the end of the loop.",
-        "doc": "for#the-loop-variable"
+        "doc": "for#the-loop-variable",
+        "example": "{{ loop.revindex }}"
     },
     {
         "title": "twig loop revindex0",
         "prefix": "loop.revindex0",
         "body": "loop.revindex0",
         "description": "The loop.revindex0 variable allows you to get the number of iterations from the end of the loop (starting at 0).",
-        "doc": "for#the-loop-variable"
+        "doc": "for#the-loop-variable",
+        "example": "{{ loop.revindex0 }}"
     },
     {
         "title": "twig loop first",
         "prefix": "loop.first",
         "body": "loop.first",
         "description": "The loop.first variable allows you to check if the loop is on the first iteration.",
-        "doc": "for#the-loop-variable"
+        "doc": "for#the-loop-variable",
+        "example": "{{ loop.first }}"
     },
     {
         "title": "twig loop last",
         "prefix": "loop.last",
         "body": "loop.last",
         "description": "The loop.last variable allows you to check if the loop is on the last iteration.",
-        "doc": "for#the-loop-variable"
+        "doc": "for#the-loop-variable",
+        "example": "{{ loop.last }}"
     },
     {
         "title": "twig loop length",
         "prefix": "loop.length",
         "body": "loop.length",
         "description": "The loop.length variable allows you to get the number of items in the loop.",
-        "doc": "for#the-loop-variable"
+        "doc": "for#the-loop-variable",
+        "example": "{{ loop.length }}"
     },
     {
         "title": "twig loop parent",
         "prefix": "loop.parent",
         "body": "loop.parent",
         "description": "The loop.parent variable allows you to get the parent loop.",
-        "doc": "for#the-loop-variable"
+        "doc": "for#the-loop-variable",
+        "example": "{{ loop.parent }}"
     },
     {
         "title": "twig else if",
         "prefix": "else if",
         "body": "{% else if ${1:condition} %}",
         "description": "The else if tag allows you to add an else if condition to an if statement.",
-        "doc": "if"
+        "doc": "if",
+        "example": "{% if ${1:condition} %}\n    ${2:do something}\n{% else if ${3:condition} %}\n    ${4:do something}\n{% else %}\n    ${5:do something}\n{% endif %}"
     },
     {
         "title": "twig else",
         "prefix": "else",
         "body": "{% else %}",
         "description": "The else tag allows you to add an else condition to an if statement.",
-        "doc": "if"
+        "doc": "if",
+        "example": "{% if ${1:condition} %}\n    ${2:do something}\n{% else %}\n    ${3:do something}\n{% endif %}"
     },
     {
         "title": "twig show",
         "prefix": "show",
         "body": "{{ $1 }}",
         "description": "The show function allows you to display a variable in a safe way.",
-        "doc": ""
+        "doc": "",
+        "example": "{{ app.locale }}"
     },
     {
         "title": "twig execute",
         "prefix": "execute",
         "body": "{% $1 %}",
         "description": "The execute function allows you to execute a variable as a function.",
-        "doc": ""
+        "doc": "",
+        "example": "{% do ... %}"
+    },
+    {
+        "title": "twig end autoescape",
+        "prefix": "endautoescape",
+        "body": "{% endautoescape %}",
+        "description": "The endautoescape tag allows you to end an autoescape block.",
+        "doc": "autoescape",
+        "example": "{% autoescape 'html' %}\n    ${1:do something}\n{% endautoescape %}"
+    },
+    {
+        "title": "twig end block",
+        "prefix": "endblock",
+        "body": "{% endblock %}",
+        "description": "The endblock tag allows you to end a block.",
+        "doc": "block",
+        "example": "{% block ${1:content} %}\n    ${2:do something}\n{% endblock %}"
+    },
+    {
+        "title": "twig end end cache",
+        "prefix": "endcache",
+        "body": "{% endcache %}",
+        "description": "The endcache tag allows you to end a cache block.",
+        "doc": "cache",
+        "example": "{% cache ${1:cache_key} %}\n    ${2:do something}\n{% endcache %}"
+    },
+    {
+        "title": "twig end embed",
+        "prefix": "endembed",
+        "body": "{% endembed %}",
+        "description": "The endembed tag allows you to end an embed block.",
+        "doc": "embed",
+        "example": "{% embed ${1:template} %}\n    ${2:do something}\n{% endembed %}"
+    },
+    {
+        "title": "twig end for",
+        "prefix": "endfor",
+        "body": "{% endfor %}",
+        "description": "The endfor tag allows you to end a for loop.",
+        "doc": "for",
+        "example": "{% for ${1:item} in ${2:items} %}\n    ${3:do something}\n{% endfor %}"
+    },
+    {
+        "title": "twig end if",
+        "prefix": "endif",
+        "body": "{% endif %}",
+        "description": "The endif tag allows you to end an if statement.",
+        "doc": "if",
+        "example": "{% if ${1:condition} %}\n    ${2:do something}\n{% endif %}"
+    },
+    {
+        "title": "twig end macro",
+        "prefix": "endmacro",
+        "body": "{% endmacro %}",
+        "description": "The endmacro tag allows you to end a macro.",
+        "doc": "macro",
+        "example": "{% macro ${1:macro_name}(${2:arguments}) %}\n    ${3:do something}\n{% endmacro %}"
+    },
+    {
+        "title": "twig end sandbox",
+        "prefix": "endsandbox",
+        "body": "{% endsandbox %}",
+        "description": "The endsandbox tag allows you to end a sandbox block.",
+        "doc": "sandbox",
+        "example": "{% sandbox %}\n    ${1:do something}\n{% endsandbox %}"
+    },
+    {
+        "title": "twig end set",
+        "prefix": "endset",
+        "body": "{% endset %}",
+        "description": "The endset tag allows you to end a set block.",
+        "doc": "set",
+        "example": "{% set ${1:variable} = ${2:expression} %}"
+    },
+    {
+        "title": "twig end spaceless",
+        "prefix": "endspaceless",
+        "body": "{% endspaceless %}",
+        "description": "The endspaceless tag allows you to end a spaceless block.",
+        "doc": "spaceless",
+        "example": "{% spaceless %}\n    ${1:do something}\n{% endspaceless %}"
+    },
+    {
+        "title": "twig end use",
+        "prefix": "enduse",
+        "body": "{% enduse %}",
+        "description": "The enduse tag allows you to end a use block.",
+        "doc": "use",
+        "example": "{% use ${1:template} %}"
+    },
+    {
+        "title": "twig end verbatim",
+        "prefix": "endverbatim",
+        "body": "{% endverbatim %}",
+        "description": "The endverbatim tag allows you to end a verbatim block.",
+        "doc": "verbatim",
+        "example": "{% verbatim %}\n    ${1:do something}\n{% endverbatim %}"
+    },
+    {
+        "title": "twig end with",
+        "prefix": "endwith",
+        "body": "{% endwith %}",
+        "description": "The endwith tag allows you to end a with block.",
+        "doc": "with",
+        "example": "{% with ${1:variable} %}\n    ${2:do something}\n{% endwith %}"
     }
 ]

@@ -13,7 +13,16 @@
             "<li>You can also chain filters and pass arguments to them</li>",
             "</ul>"
         ],
-        "doc": "apply"
+        "doc": "apply",
+        "example": [
+            "{% apply upper %}",
+            "\tThis text becomes uppercase",
+            "{% endapply %}",
+            "\r",
+            "{% apply lower|replace({' ': '-'}) %}",
+            "\tThis text becomes lowercase and spaces are replaced by dashes",
+            "{% endapply %}"
+        ]
     },
     {
         "title": "twig autoescape tag",
@@ -32,7 +41,50 @@
             "\r",
             "Twig is smart enough to not escape an already escaped value by the escape filter."
         ],
-        "doc": "autoescape"
+        "doc": "autoescape",
+        "example": [
+            "{% autoescape 'html' %}",
+            "\t{{ user.name }}",
+            "\t{{ user.description }}",
+            "\t{{ user.getAvatarUrl() }}",
+            "{% endautoescape %}",
+            "\r",
+            "{% autoescape 'js' %}",
+            "\t{{ user.name }}",
+            "\t{{ user.description }}",
+            "\t{{ user.getAvatarUrl() }}",
+            "{% endautoescape %}",
+            "\r",
+            "{% autoescape 'css' %}",
+            "\t{{ user.name }}",
+            "\t{{ user.description }}",
+            "\t{{ user.getAvatarUrl() }}",
+            "{% endautoescape %}",
+            "\r",
+            "{% autoescape 'html_attr' %}",
+            "\t{{ user.name }}",
+            "\t{{ user.description }}",
+            "\t{{ user.getAvatarUrl() }}",
+            "{% endautoescape %}",
+            "\r",
+            "{% autoescape 'js_attr' %}",
+            "\t{{ user.name }}",
+            "\t{{ user.description }}",
+            "\t{{ user.getAvatarUrl() }}",
+            "{% endautoescape %}",
+            "\r",
+            "{% autoescape 'css_attr' %}",
+            "\t{{ user.name }}",
+            "\t{{ user.description }}",
+            "\t{{ user.getAvatarUrl() }}",
+            "{% endautoescape %}",
+            "\r",
+            "{% autoescape 'url' %}",
+            "\t{{ user.name }}",
+            "\t{{ user.description }}",
+            "\t{{ user.getAvatarUrl() }}",
+            "{% endautoescape %}"
+        ]
     },
     {
         "title": "twig block tag",
@@ -47,7 +99,14 @@
             "\r",
             "Block names must consist of alphanumeric characters, and underscores. The first char can't be a digit and dashes are not permitted."
         ],
-        "doc": "block"
+        "doc": "block",
+        "example": [
+            "{% block content %}",
+            "\t{% for post in posts %}",
+            "\t\t{{ post.title }}",
+            "\t{% endfor %}",
+            "{% endblock %}"
+        ]
     },
     {
         "title": "twig cache tag",
@@ -70,7 +129,14 @@
             "<li>Embed a unique key that is updated whenever the variables used in the template code changes.</li>",
             "</ul>"
         ],
-        "doc": "cache"
+        "doc": "cache",
+        "example": [
+            "{% cache 'cms_page_1' ttl(300) tags('cms') %}",
+            "\t{% for post in posts %}",
+            "\t\t{{ post.title }}",
+            "\t{% endfor %}",
+            "{% endcache %}"
+        ]
     },
     {
         "title": "twig deprecated tag",
@@ -83,14 +149,26 @@
             "\r",
             "Note that by default, the deprecation notices are silenced and never displayed nor logged. See Recipes to learn how to handle them."
         ],
-        "doc": "deprecated"
+        "doc": "deprecated",
+        "example": [
+            "{% deprecated 'The \"foo\" filter is deprecated, use \"bar\" instead' %}",
+            "\r",
+            "{{ 'foo'|foo }}"
+        ]
     },
     {
         "title": "twig do tag",
         "prefix": "do",
         "body": "{% do ${1:expression} %}",
         "description": "The do tag works exactly like the regular variable expression <code>({{ ... }})</code> just that it doesn't print anything:",
-        "doc": "do"
+        "doc": "do",
+        "example": [
+            "{% do foo.bar('baz') %}",
+            "\r",
+            "{% do foo.bar('baz') %}",
+            "\r",
+            "{{ foo.bar('baz') }}"
+        ]
     },
     {
         "title": "twig embed tag",
@@ -111,21 +189,44 @@
             "The embed tag takes the idea of template inheritance to the level of content fragments. While template inheritance allows for \"document skeletons\", which are filled with life by child templates, the embed tag allows you to create \"skeletons\" for smaller units of content and re-use and fill them anywhere you like.",
             "Since the use case may not be obvious, let's look at a simplified example. Imagine a base template shared by multiple HTML pages, defining a single block named \"content\":"
         ],
-        "doc": "embed"
+        "doc": "embed",
+        "example": [
+            "{% embed 'base.html.twig' %}",
+            "\t{% block content %}",
+            "\t\t{% for post in posts %}",
+            "\t\t\t{{ post.title }}",
+            "\t\t{% endfor %}",
+            "\t{% endblock %}",
+            "{% endembed %}"
+        ]
     },
     {
         "title": "twig extends tag",
         "prefix": "extends",
         "body": "{% extends '${1:template_name}' %}",
         "description": "The extends tag allows you to extend a template.",
-        "doc": "extends"
+        "doc": "extends",
+        "example": [
+            "{% extends 'base.html.twig' %}",
+            "\r",
+            "{% block content %}",
+            "\t{% for post in posts %}",
+            "\t\t{{ post.title }}",
+            "\t{% endfor %}",
+            "{% endblock %}"
+        ]
     },
     {
         "title": "twig flush tag",
         "prefix": "flush",
         "body": "{% flush %}",
         "description": "The flush tag allows you to flush the output buffer.",
-        "doc": "flush"
+        "doc": "flush",
+        "example": [
+            "{% flush %}",
+            "\r",
+            "This is a test"
+        ]
     },
     {
         "title": "twig for tag",
@@ -136,14 +237,24 @@
             "{% endfor %}"
         ],
         "description": "The for tag allows you to iterate over a sequence.",
-        "doc": "for"
+        "doc": "for",
+        "example": [
+            "{% for post in posts %}",
+            "\t{{ post.title }}",
+            "{% endfor %}"
+        ]
     },
     {
         "title": "twig from tag",
         "prefix": "from",
         "body": "{% from '${1:template_name}' import ${2:macro_name} as ${3:macro_alias} %}",
         "description": "The from tag allows you to import macros from another template.",
-        "doc": "from"
+        "doc": "from",
+        "example": [
+            "{% from 'forms.html.twig' import form_start %}",
+            "\r",
+            "{{ form_start(form) }}"
+        ]
     },
     {
         "title": "twig if tag",
@@ -154,21 +265,38 @@
             "{% endif %}"
         ],
         "description": "The if tag allows you to execute a block of template data only if a condition is met.",
-        "doc": "if"
+        "doc": "if",
+        "example": [
+            "{% if posts %}",
+            "\tThere are some posts!",
+            "{% endif %}"
+        ]
     },
     {
         "title": "twig import tag",
         "prefix": "import",
         "body": "{% import '${1:template_name}' as ${2:macro_namespace} %}",
         "description": "The import tag allows you to import macros from another template.",
-        "doc": "import"
+        "doc": "import",
+        "example": [
+            "{% import 'forms.html.twig' as forms %}",
+            "\r",
+            "{{ forms.form_start(form) }}"
+        ]
     },
     {
         "title": "twig include tag",
         "prefix": "include",
         "body": "{% include '${1:template_name}' %}",
         "description": "The include tag allows you to include a template.",
-        "doc": "include"
+        "doc": "include",
+        "example": [
+            "{% include 'header.html.twig' %}",
+            "\r",
+            "This is a test",
+            "\r",
+            "{% include 'footer.html.twig' %}"
+        ]
     },
     {
         "title": "twig macro tag",
@@ -179,7 +307,12 @@
             "{% endmacro %}"
         ],
         "description": "The macro tag allows you to define a macro.",
-        "doc": "macro"
+        "doc": "macro",
+        "example": [
+            "{% macro input(name, value, type, size) %}",
+            "\t<input type=\"{{ type|default('text') }}\" name=\"{{ name }}\" value=\"{{ value }}\" size=\"{{ size|default(20) }}\" />",
+            "{% endmacro %}"
+        ]
     },
     {
         "title": "twig sandbox tag",
@@ -190,21 +323,36 @@
             "{% endsandbox %}"
         ],
         "description": "The sandbox tag allows you to restrict the tags, filters, and functions that are allowed to be used in a template.",
-        "doc": "sandbox"
+        "doc": "sandbox",
+        "example": [
+            "{% sandbox %}",
+            "\t{{ post.title }}",
+            "{% endsandbox %}"
+        ]
     },
     {
         "title": "twig set tag",
         "prefix": "set",
         "body": "{% set ${1:variable_name} = ${2:expression} %}",
         "description": "The set tag allows you to set a template variable.",
-        "doc": "set"
+        "doc": "set",
+        "example": [
+            "{% set foo = 'foo' %}",
+            "\r",
+            "{{ foo }}"
+        ]
     },
     {
         "title": "twig use tag",
         "prefix": "use",
         "body": "{% use '${1:template_name}' with ${2:block_name} as ${3:block_alias} %}",
         "description": "The use tag allows you to import macros from another template.",
-        "doc": "use"
+        "doc": "use",
+        "example": [
+            "{% use 'forms.html.twig' with form_start as start_form %}",
+            "\r",
+            "{{ start_form(form) }}"
+        ]
     },
     {
         "title": "twig verbatim tag",
@@ -215,7 +363,12 @@
             "{% endverbatim %}"
         ],
         "description": "The verbatim tag allows you to output raw data without Twig processing it.",
-        "doc": "verbatim"
+        "doc": "verbatim",
+        "example": [
+            "{% verbatim %}",
+            "\t{{ post.title }}",
+            "{% endverbatim %}"
+        ]
     },
     {
         "title": "twig with tag",
@@ -226,6 +379,11 @@
             "{% endwith %}"
         ],
         "description": "The with tag allows you to set a temporary variable.",
-        "doc": "with"
+        "doc": "with",
+        "example": [
+            "{% with { 'foo': 'bar' } %}",
+            "\t{{ foo }}",
+            "{% endwith %}"
+        ]
     }
 ]

@@ -2,6 +2,7 @@ import * as vscode from 'vscode';
 import { Config } from './Helpers/Config';
 import { ContributeCompletionProvider } from './Provider/Completion/ContributeCompletionProvider';
 import { CraftCompletionProvider } from './Provider/Completion/CraftCompletionProvider';
+import { DrupalCompletionProvider } from './Provider/Completion/DrupalCompletionProvider';
 import { SymfonyCompletionProvider } from './Provider/Completion/SymfonyCompletionProvider';
 import { TwigCompletionProvider } from './Provider/Completion/TwigCompletionProvider';
 import { ExtensionHoverProvider } from './Provider/Hover/ExtensionHoverProvider';
@@ -34,6 +35,11 @@ export function enableSnippets(context: vscode.ExtensionContext) {
 	if (Config.enableCraft) {
 		let craftProvider = vscode.languages.registerCompletionItemProvider('twig', new CraftCompletionProvider());
 		context.subscriptions.push(craftProvider);
+	}
+
+	if (Config.enableDrupal) {
+		let drupalProvider = vscode.languages.registerCompletionItemProvider('twig', new DrupalCompletionProvider());
+		context.subscriptions.push(drupalProvider);
 	}
 
 }
